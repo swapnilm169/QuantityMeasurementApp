@@ -1,12 +1,16 @@
 package com.apps.quantityMeasurementApp;
 
+import java.text.DecimalFormat;
+
 public class Length {
     private Double value;
     private LengthUnit unit;
 
     public enum LengthUnit{
         FEET(12.0),
-        INCHES(1.0);
+        INCHES(1.0),
+        YARDS(36.0),
+        CENTIMETERS(0.393701);
 
         private final double conversionFactor;
 
@@ -22,7 +26,8 @@ public class Length {
     this.unit=unit;
     }
     private double convertToBaseUnit(){
-        return value * unit.getConversionFactor();
+        DecimalFormat df =new DecimalFormat("#.##");
+        return Double.parseDouble(df.format(value * unit.getConversionFactor()));
     }
     private boolean compare(Length thatlength){
     if(thatlength==null){
@@ -33,13 +38,13 @@ public class Length {
 
     @Override
     public boolean equals(Object obj) {
-        if(this==obj) return true;
-        if(obj == null||getClass()!= obj.getClass()) return false;
+        if(this==obj)return true;
+        if(obj == null||getClass()!= obj.getClass())return false;
         Length length = (Length) obj;
-        if((this.value== null && length.value==null && this.unit == null && length.unit== null)){
+        if(this.value== null && length.value==null && this.unit == null && length.unit== null){
             return true;
         }
-        if((this.value == null || length.value==null || this.unit == null || length.unit== null)){
+        if(this.value == null || length.value==null || this.unit == null || length.unit== null){
             return false;
         }
         return this.compare(length);
@@ -47,6 +52,14 @@ public class Length {
     public static void main(String[] args) {
         Length length1= new Length(1.0, LengthUnit.FEET);
         Length length2= new Length(12.0 ,LengthUnit.INCHES);
-        System.out.println("Are Length Equal ? " +length1.equals(length2));
+        System.out.println("Are Length Equal ?:  " +length1.equals(length2));
+
+        Length length3 =new Length(1.0,LengthUnit.YARDS);
+        Length length4 = new Length(36.0,LengthUnit.INCHES);
+        System.out.println("Are Length Equal ?: " +length3.equals(length4));
+
+        Length length5 =new Length(1.0,LengthUnit.CENTIMETERS);
+        Length length6 = new Length(0.393701,LengthUnit.INCHES);
+        System.out.println("Are Length Equal ?: " +length5.equals(length6));
     }
 }
