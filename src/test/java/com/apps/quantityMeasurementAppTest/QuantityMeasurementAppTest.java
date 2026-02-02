@@ -1,5 +1,6 @@
 package com.apps.quantityMeasurementAppTest;
 
+import com.apps.quantityMeasurementApp.Length;
 import com.apps.quantityMeasurementApp.QuantityMeasurementApp;
 import org.junit.Test;
 
@@ -56,7 +57,7 @@ public class QuantityMeasurementAppTest {
         assertThrows(ClassCastException.class, () -> new QuantityMeasurementApp.Feet((Double) obj));
     }
 
-    /*For Inches*/
+    /*For Inches UC2*/
     @Test
     public void testInchesEquality_SameValue(){
         QuantityMeasurementApp.Inches inches_value_1 = new QuantityMeasurementApp.Inches( 10d);
@@ -90,7 +91,7 @@ public class QuantityMeasurementAppTest {
         QuantityMeasurementApp.Inches inches_value_1 = new QuantityMeasurementApp.Inches(null);
         QuantityMeasurementApp.Inches inches_value_2 = new QuantityMeasurementApp.Inches(null);
         var result= inches_value_1.equals(inches_value_2);
-        assertFalse(result);
+        assertTrue(result);
     }
 
     @Test
@@ -105,5 +106,61 @@ public class QuantityMeasurementAppTest {
         QuantityMeasurementApp.Inches inches_value_1 = new QuantityMeasurementApp.Inches(10d);
         Object obj="D1";
         assertThrows(ClassCastException.class, () -> new QuantityMeasurementApp.Inches((Double) obj));
+    }
+
+    /*For UC3 Test Code*/
+    @Test
+    public void testEquality_FeetToFeet_SameValue(){
+        Length length1 = new Length(12.0 , Length.LengthUnit.FEET);
+        Length length2 = new Length( 12.0, Length.LengthUnit.FEET);
+        assertTrue(QuantityMeasurementApp.demonstrateLengthEquality(length1,length2));
+    }
+    @Test
+    public void testEquality_InchToInch_SameValue(){
+        Length length1 = new Length(12.0 , Length.LengthUnit.INCHES);
+        Length length2 = new Length( 12.0, Length.LengthUnit.INCHES);
+        assertTrue(QuantityMeasurementApp.demonstrateLengthEquality(length1,length2));
+    }
+    @Test
+    public void testEquality_NullComparison(){
+        Length length1 = new Length(null, null);
+        Length length2 = new Length( null, null);
+        assertTrue(QuantityMeasurementApp.demonstrateLengthEquality(length1,length2));
+    }
+    @Test
+    public void testEquality_FirstVal_NullComparison(){
+        Length length1 = new Length(null, Length.LengthUnit.INCHES);
+        Length length2 = new Length( null, Length.LengthUnit.INCHES);
+        assertFalse(QuantityMeasurementApp.demonstrateLengthEquality(length1,length2));
+    }
+    @Test
+    public void testEquality_SecondVal_NullComparison(){
+        Length length1 = new Length(12.9d, null);
+        Length length2 = new Length( 12.9d, null);
+        assertFalse(QuantityMeasurementApp.demonstrateLengthEquality(length1,length2));
+    }
+    @Test
+    public void testEquality_InchToFeet_EquivalentValue(){
+        Length length1 = new Length(12.0d, Length.LengthUnit.INCHES);
+        Length length2 = new Length( 1.0d, Length.LengthUnit.FEET);
+        assertTrue(QuantityMeasurementApp.demonstrateLengthEquality(length1,length2));
+    }
+    @Test
+    public void testEquality_FeetToFeet_DifferentValue(){
+        Length length1 = new Length(13.0 , Length.LengthUnit.FEET);
+        Length length2 = new Length( 12.0, Length.LengthUnit.FEET);
+        assertFalse(QuantityMeasurementApp.demonstrateLengthEquality(length1,length2));
+    }
+
+    @Test
+    public void testEquality_InchToInch_DifferentValue(){
+        Length length1 = new Length(13.0 , Length.LengthUnit.INCHES);
+        Length length2 = new Length( 12.0, Length.LengthUnit.INCHES);
+        assertFalse(QuantityMeasurementApp.demonstrateLengthEquality(length1,length2));
+    }
+    @Test
+    public void testEquality_InvalidUnit(){
+        Length length1 = new Length(13.0 , Length.LengthUnit.INCHES);
+        assertThrows(Exception.class,()->QuantityMeasurementApp.demonstrateLengthEquality(length1, (Length) new Object()));
     }
 }

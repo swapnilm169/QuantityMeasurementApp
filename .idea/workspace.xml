@@ -5,12 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5715c65e-99d2-4d9d-905f-99702c0b90e5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/apps/quantityMeasurementApp/QuantityMeasurementApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/apps/quantityMeasurementApp/QuantityMeasurementApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/apps/quantityMeasurementAppTest/QuantityMeasurementAppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/apps/quantityMeasurementAppTest/QuantityMeasurementAppTest.java" afterDir="false" />
     </list>
@@ -22,8 +17,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -43,18 +38,20 @@
     "Application.QuantityMeasurementApp (1).executor": "Run",
     "Application.QuantityMeasurementApp.executor": "Run",
     "JUnit.QuantityMeasurementAppTest (1).executor": "Coverage",
-    "JUnit.QuantityMeasurementAppTest.executor": "Coverage",
+    "JUnit.QuantityMeasurementAppTest.executor": "Run",
+    "JUnit.QuantityMeasurementAppTest.testEquality_FeetToFeet_SameValue.executor": "Run",
+    "JUnit.QuantityMeasurementAppTest.testEquality_FirstVal_NullComparison.executor": "Run",
     "JUnit.QuantityMeasurementAppTest.testFeetEquality_NullComparisonAllValueNull.executor": "Debug",
     "JUnit.QuantityMeasurementAppTest.testFeetEquality_SameReference.executor": "Coverage",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "UC2",
+    "git-widget-placeholder": "UC3",
     "onboarding.tips.debug.path": "D:/Project/QuantityMeasurmentApp/src/main/java/org/example/Main.java",
     "settings.editor.selected.configurable": "preferences.lookFeel"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.QuantityMeasurementApp">
+  <component name="RunManager" selected="JUnit.QuantityMeasurementAppTest">
     <configuration name="QuantityMeasurementApp (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.apps.quantityMeasurementApp.QuantityMeasurementApp" />
       <module name="QuantityMeasurmentApp" />
@@ -116,7 +113,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="QuantityMeasurementAppTest.testFeetEquality_NullComparisonAllValueNull" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="QuantityMeasurementAppTest.testEquality_FeetToFeet_SameValue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="QuantityMeasurmentApp" />
       <extension name="coverage">
         <pattern>
@@ -126,13 +123,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.apps.quantityMeasurementAppTest" />
       <option name="MAIN_CLASS_NAME" value="com.apps.quantityMeasurementAppTest.QuantityMeasurementAppTest" />
-      <option name="METHOD_NAME" value="testFeetEquality_NullComparisonAllValueNull" />
+      <option name="METHOD_NAME" value="testEquality_FeetToFeet_SameValue" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="QuantityMeasurementAppTest.testFeetEquality_SameReference" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="QuantityMeasurementAppTest.testEquality_FirstVal_NullComparison" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="QuantityMeasurmentApp" />
       <extension name="coverage">
         <pattern>
@@ -142,7 +139,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.apps.quantityMeasurementAppTest" />
       <option name="MAIN_CLASS_NAME" value="com.apps.quantityMeasurementAppTest.QuantityMeasurementAppTest" />
-      <option name="METHOD_NAME" value="testFeetEquality_SameReference" />
+      <option name="METHOD_NAME" value="testEquality_FirstVal_NullComparison" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -150,11 +147,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.QuantityMeasurementAppTest" />
+        <item itemvalue="JUnit.QuantityMeasurementAppTest.testEquality_FirstVal_NullComparison" />
+        <item itemvalue="JUnit.QuantityMeasurementAppTest.testEquality_FeetToFeet_SameValue" />
         <item itemvalue="Application.QuantityMeasurementApp" />
         <item itemvalue="Application.QuantityMeasurementApp (1)" />
-        <item itemvalue="JUnit.QuantityMeasurementAppTest" />
-        <item itemvalue="JUnit.QuantityMeasurementAppTest.testFeetEquality_NullComparisonAllValueNull" />
-        <item itemvalue="JUnit.QuantityMeasurementAppTest.testFeetEquality_SameReference" />
       </list>
     </recent_temporary>
   </component>
@@ -186,6 +183,11 @@
           <url>file://$PROJECT_DIR$/src/main/java/org/example/Main.java</url>
           <line>13</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/apps/quantityMeasurementAppTest/QuantityMeasurementAppTest.java</url>
+          <line>132</line>
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

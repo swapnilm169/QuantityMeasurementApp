@@ -29,6 +29,9 @@ public class QuantityMeasurementApp {
                 if (this==obj) return true;
                 if(obj == null||getClass()!= obj.getClass())return false;
                 Inches inches =(Inches)obj;
+                if(this.value == null && inches.value==null){
+                    return true;
+                }
                 if(this.value == null || inches.value==null){
                     return false;
                 }
@@ -56,9 +59,21 @@ public class QuantityMeasurementApp {
             boolean result_Inches= inches_first_Val.equals(inches_second_Val);
             System.out.println(result_Inches ? "Inches :: Equal(true)" :"Inches:: not-Equal(false)");
         }
+        public static void demonstrateFeetInchesComparison(){
+            Length length1 = new Length(1.0d , Length.LengthUnit.FEET);
+            Length length2 = new Length( 12.0d, Length.LengthUnit.INCHES);
+
+            boolean result= demonstrateLengthEquality(length1,length2);
+            System.out.println(result ? "Inches :: Equal(true)" :"Inches:: not-Equal(false)");
+        }
+
+    public static boolean demonstrateLengthEquality(Length length1, Length length2) {
+    return length1.equals(length2);
+    }
 
     public static void main(String[] args) {
             demonstrateFeetEquality();
             demonstrateInchesEquality();
+            demonstrateFeetInchesComparison();
     }
 }
