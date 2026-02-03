@@ -84,6 +84,17 @@ public class QuantityMeasurementApp {
         Length length2 = new Length(second_value, second_unit);
         return length1.equals(length2);
     }
+    public static Length demonstrateLengthComparison(Double value,
+                                                     Length.LengthUnit fromUnit,Length.LengthUnit toUnit){
+        Length length = new Length(value,fromUnit);
+        Double v = length.convertTo(toUnit);
+        return new Length(v,toUnit);
+    }
+
+    public static Length demonstrateLengthComparison(Length.LengthUnit fromUnit ,Length.LengthUnit toUnit){
+        Double v = (double) fromUnit.compareTo(toUnit);
+        return  new Length(v,toUnit);
+    }
 
     public static void main(String[] args) {
         /*Feet To Inches*/
@@ -120,5 +131,7 @@ public class QuantityMeasurementApp {
         System.out.println(demonstrateLengthComparison(30.48, Length.LengthUnit.CENTIMETERS,
                 1.0, Length.LengthUnit.FEET)
                 ? "Equal(true)" : "not-Equal(false)");
+        Length l1= new Length(1.0 , Length.LengthUnit.YARDS);
+        System.out.println( demonstrateLengthComparison(1.0,Length.LengthUnit.INCHES, Length.LengthUnit.FEET));
     }
 }

@@ -4,7 +4,8 @@ import com.apps.quantityMeasurementApp.Length;
 import com.apps.quantityMeasurementApp.QuantityMeasurementApp;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+//import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class QuantityMeasurementAppTest {
     @Test
@@ -274,7 +275,77 @@ public class QuantityMeasurementAppTest {
         Length length2 = new Length(6.0 , Length.LengthUnit.FEET);
         Length length3 = new Length(6.0 , Length.LengthUnit.FEET);
         Length length4 = new Length(72.0 , Length.LengthUnit.INCHES);
-       assertTrue(QuantityMeasurementApp.demonstrateLengthEquality(length1,length2));
-        assertTrue(QuantityMeasurementApp.demonstrateLengthEquality(length3,length4));
+        assertAll(
+                ()->assertEquals(length1,length2),
+                ()->assertEquals(length2,length3),
+                ()->assertEquals(length3,length4)
+        );
+
+    }
+    /*UC5 test case*/
+    @Test
+    public void testConversion_FeetToInches(){
+        assertEquals(new Length(12.0 , Length.LengthUnit.INCHES),
+                QuantityMeasurementApp.demonstrateLengthComparison(1.0,Length.LengthUnit.FEET, Length.LengthUnit.INCHES));
+    }
+    @Test
+    public void testConversion_InchesToFeet(){
+        assertEquals(new Length(2.0 , Length.LengthUnit.FEET),
+                QuantityMeasurementApp.demonstrateLengthComparison(24.0,Length.LengthUnit.INCHES, Length.LengthUnit.INCHES));
+
+    }
+    @Test
+    public void testConversion_YardToInches(){
+        assertEquals(new Length(36.0 , Length.LengthUnit.INCHES),
+                QuantityMeasurementApp.demonstrateLengthComparison(1.0,Length.LengthUnit.YARDS, Length.LengthUnit.INCHES));
+
+    }
+    @Test
+    public void testConversion_InchesToYard(){
+        assertEquals(new Length(2.0 , Length.LengthUnit.YARDS),
+                QuantityMeasurementApp.demonstrateLengthComparison(72.0,Length.LengthUnit.INCHES, Length.LengthUnit.YARDS));
+    }
+    @Test
+    public void testConversion_CentimeterToInches(){
+        assertEquals(new Length(1.0 , Length.LengthUnit.INCHES),
+                QuantityMeasurementApp.demonstrateLengthComparison(2.54,Length.LengthUnit.CENTIMETERS, Length.LengthUnit.INCHES));
+
+    }
+    @Test
+    public void testConversion_FeetToYard(){
+        assertEquals(new Length(2.0 , Length.LengthUnit.YARDS),
+                QuantityMeasurementApp.demonstrateLengthComparison(6.0,Length.LengthUnit.FEET, Length.LengthUnit.YARDS));
+    }
+
+
+    @Test
+    public void testConversion_RoundTrip_PreservesValue(){
+        Length length = new Length(2.0 , Length.LengthUnit.YARDS);
+        Double v= length.convertTo(Length.LengthUnit.INCHES);
+        assertEquals(length,QuantityMeasurementApp.demonstrateLengthComparison(v,Length.LengthUnit.INCHES, Length.LengthUnit.YARDS));
+    }
+    @Test
+    public void testConversion_ZeroValue(){
+        assertEquals(new Length(0.0 , Length.LengthUnit.YARDS),
+                QuantityMeasurementApp.demonstrateLengthComparison(0.0,Length.LengthUnit.FEET, Length.LengthUnit.YARDS));
+    }
+    @Test
+    public void testConversion_NegativeValue(){
+        assertEquals(new Length(2.0 , Length.LengthUnit.YARDS),
+                QuantityMeasurementApp.demonstrateLengthComparison(6.0,Length.LengthUnit.FEET, Length.LengthUnit.YARDS));
+    }
+    @Test
+    public void testConversion_InvalidUnit_ThrowException(){
+        assertEquals(new Length(-12.0 , Length.LengthUnit.INCHES),
+                QuantityMeasurementApp.demonstrateLengthComparison(-1.0,Length.LengthUnit.FEET, Length.LengthUnit.INCHES));
+    }
+    @Test
+    public void testConversion_NaNOrInfinite_ThrowException(){
+        assertThrows(Exception.class,() ->QuantityMeasurementApp.demonstrateLengthComparison(Double.NaN,Length.LengthUnit.FEET, Length.LengthUnit.YARDS)) ;
+    }
+    @Test
+    public void testConversion_PrecisionTolerance(){
+        assertEquals(new Length(2.54e-6 , Length.LengthUnit.CENTIMETERS),
+                QuantityMeasurementApp.demonstrateLengthComparison(0.000001,Length.LengthUnit.INCHES, Length.LengthUnit.CENTIMETERS));
     }
 }

@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="5715c65e-99d2-4d9d-905f-99702c0b90e5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/apps/quantityMeasurementApp/Length.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/apps/quantityMeasurementApp/Length.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/apps/quantityMeasurementApp/QuantityMeasurementApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/apps/quantityMeasurementApp/QuantityMeasurementApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/apps/quantityMeasurementAppTest/QuantityMeasurementAppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/apps/quantityMeasurementAppTest/QuantityMeasurementAppTest.java" afterDir="false" />
@@ -41,6 +42,16 @@
     "Application.QuantityMeasurementApp.executor": "Run",
     "JUnit.QuantityMeasurementAppTest (1).executor": "Coverage",
     "JUnit.QuantityMeasurementAppTest.executor": "Run",
+    "JUnit.QuantityMeasurementAppTest.testConversion_CentimeterToInches.executor": "Run",
+    "JUnit.QuantityMeasurementAppTest.testConversion_FeetToInches.executor": "Run",
+    "JUnit.QuantityMeasurementAppTest.testConversion_FeetToYard.executor": "Run",
+    "JUnit.QuantityMeasurementAppTest.testConversion_InchesToFeet.executor": "Run",
+    "JUnit.QuantityMeasurementAppTest.testConversion_InchesToYard.executor": "Run",
+    "JUnit.QuantityMeasurementAppTest.testConversion_InvalidUnit_ThrowException.executor": "Run",
+    "JUnit.QuantityMeasurementAppTest.testConversion_NaNOrInfinite_ThrowException.executor": "Run",
+    "JUnit.QuantityMeasurementAppTest.testConversion_RoundTrip_PreservesValue.executor": "Run",
+    "JUnit.QuantityMeasurementAppTest.testConversion_YardToInches.executor": "Run",
+    "JUnit.QuantityMeasurementAppTest.testConversion_ZeroValue.executor": "Run",
     "JUnit.QuantityMeasurementAppTest.testEquality_AllUnit_ComplexScenario.executor": "Run",
     "JUnit.QuantityMeasurementAppTest.testEquality_FeetToFeet_SameValue.executor": "Run",
     "JUnit.QuantityMeasurementAppTest.testEquality_FeetToYard_EquivalentValue.executor": "Run",
@@ -55,30 +66,16 @@
     "JUnit.QuantityMeasurementAppTest.testFeetEquality_SameReference.executor": "Coverage",
     "JUnit.QuantityMeasurementAppTest.testFeetEquality_SameValue.executor": "Run",
     "JUnit.QuantityMeasurementAppTest.yardEqual36Inches.executor": "Run",
+    "Maven.QuantityMeasurmentApp [clean].executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "UC4",
+    "git-widget-placeholder": "UC5",
     "onboarding.tips.debug.path": "D:/Project/QuantityMeasurmentApp/src/main/java/org/example/Main.java",
     "settings.editor.selected.configurable": "preferences.lookFeel"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.QuantityMeasurementAppTest.testEquality_AllUnit_ComplexScenario">
-    <configuration name="QuantityMeasurementAppTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="QuantityMeasurmentApp" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.apps.quantityMeasurementAppTest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.apps.quantityMeasurementAppTest" />
-      <option name="MAIN_CLASS_NAME" value="com.apps.quantityMeasurementAppTest.QuantityMeasurementAppTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.QuantityMeasurementAppTest.testConversion_PrecisionTolerance">
     <configuration name="QuantityMeasurementAppTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="QuantityMeasurmentApp" />
       <extension name="coverage">
@@ -98,7 +95,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="QuantityMeasurementAppTest.testEquality_AllUnit_ComplexScenario" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="QuantityMeasurementAppTest.testConversion_InvalidUnit_ThrowException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="QuantityMeasurmentApp" />
       <extension name="coverage">
         <pattern>
@@ -108,13 +105,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.apps.quantityMeasurementAppTest" />
       <option name="MAIN_CLASS_NAME" value="com.apps.quantityMeasurementAppTest.QuantityMeasurementAppTest" />
-      <option name="METHOD_NAME" value="testEquality_AllUnit_ComplexScenario" />
+      <option name="METHOD_NAME" value="testConversion_InvalidUnit_ThrowException" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="QuantityMeasurementAppTest.testEquality_FeetToYard_EquivalentValue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="QuantityMeasurementAppTest.testConversion_NaNOrInfinite_ThrowException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="QuantityMeasurmentApp" />
       <extension name="coverage">
         <pattern>
@@ -124,13 +121,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.apps.quantityMeasurementAppTest" />
       <option name="MAIN_CLASS_NAME" value="com.apps.quantityMeasurementAppTest.QuantityMeasurementAppTest" />
-      <option name="METHOD_NAME" value="testEquality_FeetToYard_EquivalentValue" />
+      <option name="METHOD_NAME" value="testConversion_NaNOrInfinite_ThrowException" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="QuantityMeasurementAppTest.testFeetEquality_NullComparisonAllValueNull" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="QuantityMeasurementAppTest.testConversion_PrecisionTolerance" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="QuantityMeasurmentApp" />
       <extension name="coverage">
         <pattern>
@@ -140,13 +137,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.apps.quantityMeasurementAppTest" />
       <option name="MAIN_CLASS_NAME" value="com.apps.quantityMeasurementAppTest.QuantityMeasurementAppTest" />
-      <option name="METHOD_NAME" value="testFeetEquality_NullComparisonAllValueNull" />
+      <option name="METHOD_NAME" value="testConversion_PrecisionTolerance" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="QuantityMeasurementAppTest.testFeetEquality_SameValue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="QuantityMeasurementAppTest.testConversion_RoundTrip_PreservesValue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="QuantityMeasurmentApp" />
       <extension name="coverage">
         <pattern>
@@ -156,7 +153,23 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.apps.quantityMeasurementAppTest" />
       <option name="MAIN_CLASS_NAME" value="com.apps.quantityMeasurementAppTest.QuantityMeasurementAppTest" />
-      <option name="METHOD_NAME" value="testFeetEquality_SameValue" />
+      <option name="METHOD_NAME" value="testConversion_RoundTrip_PreservesValue" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="QuantityMeasurementAppTest.testConversion_ZeroValue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="QuantityMeasurmentApp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.apps.quantityMeasurementAppTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.apps.quantityMeasurementAppTest" />
+      <option name="MAIN_CLASS_NAME" value="com.apps.quantityMeasurementAppTest.QuantityMeasurementAppTest" />
+      <option name="METHOD_NAME" value="testConversion_ZeroValue" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -164,11 +177,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.QuantityMeasurementAppTest.testEquality_AllUnit_ComplexScenario" />
-        <item itemvalue="JUnit.QuantityMeasurementAppTest" />
-        <item itemvalue="JUnit.QuantityMeasurementAppTest.testEquality_FeetToYard_EquivalentValue" />
-        <item itemvalue="JUnit.QuantityMeasurementAppTest.testFeetEquality_NullComparisonAllValueNull" />
-        <item itemvalue="JUnit.QuantityMeasurementAppTest.testFeetEquality_SameValue" />
+        <item itemvalue="JUnit.QuantityMeasurementAppTest.testConversion_PrecisionTolerance" />
+        <item itemvalue="JUnit.QuantityMeasurementAppTest.testConversion_NaNOrInfinite_ThrowException" />
+        <item itemvalue="JUnit.QuantityMeasurementAppTest.testConversion_InvalidUnit_ThrowException" />
+        <item itemvalue="JUnit.QuantityMeasurementAppTest.testConversion_ZeroValue" />
+        <item itemvalue="JUnit.QuantityMeasurementAppTest.testConversion_RoundTrip_PreservesValue" />
       </list>
     </recent_temporary>
   </component>
@@ -203,8 +216,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/apps/quantityMeasurementApp/QuantityMeasurementApp.java</url>
-          <line>89</line>
-          <option name="timeStamp" value="23" />
+          <line>88</line>
+          <option name="timeStamp" value="27" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -1,6 +1,7 @@
 package com.apps.quantityMeasurementApp;
 
 import java.text.DecimalFormat;
+import java.util.Objects;
 
 public class Length {
     private Double value;
@@ -20,6 +21,14 @@ public class Length {
         private Double getConversionFactor(){
             return conversionFactor;
         }
+    }
+
+    @Override
+    public String toString() {
+        return "Length{" +
+                "value=" + value +
+                ", unit=" + unit +
+                '}';
     }
     public Length(Double value ,LengthUnit unit){
     this.value=value;
@@ -49,6 +58,20 @@ public class Length {
         }
         return this.compare(length);
     }
+    public  Double convertTo( LengthUnit targetUnit)throws IllegalArgumentException{
+        if(!Double.isFinite(this.value)){
+            throw new IllegalArgumentException("Value must me Numeric");
+        }
+        if(Objects.isNull(this.value)|| (Objects.isNull(targetUnit))){
+            throw new IllegalArgumentException("Value must me Not null");
+        }
+    if(Objects.nonNull(unit) && Objects.nonNull(targetUnit)){
+        DecimalFormat df= new DecimalFormat("#.##");
+        Double sourceValue= value * (unit.getConversionFactor());
+        return  Double.parseDouble(df.format(sourceValue/targetUnit.getConversionFactor()));
+    }
+    return null;
+    }
     public static void main(String[] args) {
         Length length1= new Length(1.0, LengthUnit.FEET);
         Length length2= new Length(12.0 ,LengthUnit.INCHES);
@@ -61,5 +84,8 @@ public class Length {
         Length length5 =new Length(1.0,LengthUnit.CENTIMETERS);
         Length length6 = new Length(0.393701,LengthUnit.INCHES);
         System.out.println("Are Length Equal ?: " +length5.equals(length6));
+
+        Length l1 = new Length(1.0, LengthUnit.YARDS);
+        System.out.println(" Converted value:: "+l1.convertTo(LengthUnit.FEET));
     }
 }
