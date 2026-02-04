@@ -58,19 +58,27 @@ public class Length {
         }
         return this.compare(length);
     }
-    public  Double convertTo( LengthUnit targetUnit)throws IllegalArgumentException{
+    public Length convertTo( LengthUnit targetUnit)throws IllegalArgumentException{
         if(!Double.isFinite(this.value)){
             throw new IllegalArgumentException("Value must me Numeric");
         }
-        if(Objects.isNull(this.value)|| (Objects.isNull(targetUnit))){
+        if(Objects.isNull(unit)|| (Objects.isNull(targetUnit))){
             throw new IllegalArgumentException("Value must me Not null");
         }
-    if(Objects.nonNull(unit) && Objects.nonNull(targetUnit)){
-        DecimalFormat df= new DecimalFormat("#.##");
-        Double sourceValue= value * (unit.getConversionFactor());
-        return  Double.parseDouble(df.format(sourceValue/targetUnit.getConversionFactor()));
+        DecimalFormat df= new DecimalFormat("#.###");
+        double sourceValue= value * unit.getConversionFactor();
+        return new Length(Double.parseDouble(df.format(sourceValue/targetUnit.getConversionFactor())),targetUnit);
+
     }
-    return null;
+    public Length add(Length targetLength) throws IllegalArgumentException{
+        if (targetLength==null) {
+            throw new IllegalArgumentException("Length must have value not Null");
+        }
+        if(!Double.isFinite(this.value)|| (!Double.isFinite(targetLength.value))){
+            throw new IllegalArgumentException("Value must have Numeric");
+        }
+        Length length=new Length(convertToBaseUnit() + targetLength.convertToBaseUnit(),LengthUnit.INCHES);
+        return length.convertTo(this.unit);
     }
     public static void main(String[] args) {
         Length length1= new Length(1.0, LengthUnit.FEET);
@@ -87,5 +95,11 @@ public class Length {
 
         Length l1 = new Length(1.0, LengthUnit.YARDS);
         System.out.println(" Converted value:: "+l1.convertTo(LengthUnit.FEET));
+
+        Length l122 = new Length(1.0, LengthUnit.YARDS);
+        Length l12 = new Length(1.0, LengthUnit.YARDS);
+        System.out.println("Add ::"+ l122.add(l12) );
+
+
     }
 }

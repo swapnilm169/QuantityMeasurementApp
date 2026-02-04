@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="5715c65e-99d2-4d9d-905f-99702c0b90e5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/apps/quantityMeasurementApp/Length.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/apps/quantityMeasurementApp/Length.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/apps/quantityMeasurementApp/QuantityMeasurementApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/apps/quantityMeasurementApp/QuantityMeasurementApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/apps/quantityMeasurementAppTest/QuantityMeasurementAppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/apps/quantityMeasurementAppTest/QuantityMeasurementAppTest.java" afterDir="false" />
@@ -25,6 +24,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="UC6" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectColorInfo">{
@@ -42,13 +46,25 @@
     "Application.QuantityMeasurementApp.executor": "Run",
     "JUnit.QuantityMeasurementAppTest (1).executor": "Coverage",
     "JUnit.QuantityMeasurementAppTest.executor": "Run",
+    "JUnit.QuantityMeasurementAppTest.testAddition_Commutativity.executor": "Run",
+    "JUnit.QuantityMeasurementAppTest.testAddition_CrossUnit_CentimeterToInch.executor": "Run",
+    "JUnit.QuantityMeasurementAppTest.testAddition_CrossUnit_FeetPlusInch.executor": "Run",
+    "JUnit.QuantityMeasurementAppTest.testAddition_CrossUnit_InchToFeet.executor": "Run",
+    "JUnit.QuantityMeasurementAppTest.testAddition_CrossUnit_YardToFeet.executor": "Run",
+    "JUnit.QuantityMeasurementAppTest.testAddition_NegativeValue.executor": "Run",
+    "JUnit.QuantityMeasurementAppTest.testAddition_NullSecondOperand.executor": "Run",
+    "JUnit.QuantityMeasurementAppTest.testAddition_SameUnit_FeetPlusFeet.executor": "Run",
+    "JUnit.QuantityMeasurementAppTest.testAddition_SameUnit_InchPlusInch.executor": "Run",
+    "JUnit.QuantityMeasurementAppTest.testAddition_SmallValues.executor": "Run",
+    "JUnit.QuantityMeasurementAppTest.testAddition_WithZero.executor": "Run",
     "JUnit.QuantityMeasurementAppTest.testConversion_CentimeterToInches.executor": "Run",
     "JUnit.QuantityMeasurementAppTest.testConversion_FeetToInches.executor": "Run",
-    "JUnit.QuantityMeasurementAppTest.testConversion_FeetToYard.executor": "Run",
+    "JUnit.QuantityMeasurementAppTest.testConversion_FeetToYard.executor": "Debug",
     "JUnit.QuantityMeasurementAppTest.testConversion_InchesToFeet.executor": "Run",
     "JUnit.QuantityMeasurementAppTest.testConversion_InchesToYard.executor": "Run",
     "JUnit.QuantityMeasurementAppTest.testConversion_InvalidUnit_ThrowException.executor": "Run",
     "JUnit.QuantityMeasurementAppTest.testConversion_NaNOrInfinite_ThrowException.executor": "Run",
+    "JUnit.QuantityMeasurementAppTest.testConversion_PrecisionTolerance.executor": "Run",
     "JUnit.QuantityMeasurementAppTest.testConversion_RoundTrip_PreservesValue.executor": "Run",
     "JUnit.QuantityMeasurementAppTest.testConversion_YardToInches.executor": "Run",
     "JUnit.QuantityMeasurementAppTest.testConversion_ZeroValue.executor": "Run",
@@ -70,12 +86,27 @@
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "UC5",
+    "git-widget-placeholder": "UC6",
     "onboarding.tips.debug.path": "D:/Project/QuantityMeasurmentApp/src/main/java/org/example/Main.java",
     "settings.editor.selected.configurable": "preferences.lookFeel"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.QuantityMeasurementAppTest.testConversion_PrecisionTolerance">
+  <component name="RunManager" selected="JUnit.QuantityMeasurementAppTest">
+    <configuration name="QuantityMeasurementAppTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="QuantityMeasurmentApp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.apps.quantityMeasurementAppTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.apps.quantityMeasurementAppTest" />
+      <option name="MAIN_CLASS_NAME" value="com.apps.quantityMeasurementAppTest.QuantityMeasurementAppTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="QuantityMeasurementAppTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="QuantityMeasurmentApp" />
       <extension name="coverage">
@@ -95,7 +126,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="QuantityMeasurementAppTest.testConversion_InvalidUnit_ThrowException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="QuantityMeasurementAppTest.testAddition_SmallValues" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="QuantityMeasurmentApp" />
       <extension name="coverage">
         <pattern>
@@ -105,13 +136,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.apps.quantityMeasurementAppTest" />
       <option name="MAIN_CLASS_NAME" value="com.apps.quantityMeasurementAppTest.QuantityMeasurementAppTest" />
-      <option name="METHOD_NAME" value="testConversion_InvalidUnit_ThrowException" />
+      <option name="METHOD_NAME" value="testAddition_SmallValues" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="QuantityMeasurementAppTest.testConversion_NaNOrInfinite_ThrowException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="QuantityMeasurementAppTest.testConversion_FeetToInches" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="QuantityMeasurmentApp" />
       <extension name="coverage">
         <pattern>
@@ -121,13 +152,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.apps.quantityMeasurementAppTest" />
       <option name="MAIN_CLASS_NAME" value="com.apps.quantityMeasurementAppTest.QuantityMeasurementAppTest" />
-      <option name="METHOD_NAME" value="testConversion_NaNOrInfinite_ThrowException" />
+      <option name="METHOD_NAME" value="testConversion_FeetToInches" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="QuantityMeasurementAppTest.testConversion_PrecisionTolerance" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="QuantityMeasurementAppTest.testConversion_InchesToFeet" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="QuantityMeasurmentApp" />
       <extension name="coverage">
         <pattern>
@@ -137,13 +168,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.apps.quantityMeasurementAppTest" />
       <option name="MAIN_CLASS_NAME" value="com.apps.quantityMeasurementAppTest.QuantityMeasurementAppTest" />
-      <option name="METHOD_NAME" value="testConversion_PrecisionTolerance" />
+      <option name="METHOD_NAME" value="testConversion_InchesToFeet" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="QuantityMeasurementAppTest.testConversion_RoundTrip_PreservesValue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="QuantityMeasurementAppTest.testConversion_YardToInches" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="QuantityMeasurmentApp" />
       <extension name="coverage">
         <pattern>
@@ -153,23 +184,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.apps.quantityMeasurementAppTest" />
       <option name="MAIN_CLASS_NAME" value="com.apps.quantityMeasurementAppTest.QuantityMeasurementAppTest" />
-      <option name="METHOD_NAME" value="testConversion_RoundTrip_PreservesValue" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="QuantityMeasurementAppTest.testConversion_ZeroValue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="QuantityMeasurmentApp" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.apps.quantityMeasurementAppTest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.apps.quantityMeasurementAppTest" />
-      <option name="MAIN_CLASS_NAME" value="com.apps.quantityMeasurementAppTest.QuantityMeasurementAppTest" />
-      <option name="METHOD_NAME" value="testConversion_ZeroValue" />
+      <option name="METHOD_NAME" value="testConversion_YardToInches" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -177,11 +192,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.QuantityMeasurementAppTest.testConversion_PrecisionTolerance" />
-        <item itemvalue="JUnit.QuantityMeasurementAppTest.testConversion_NaNOrInfinite_ThrowException" />
-        <item itemvalue="JUnit.QuantityMeasurementAppTest.testConversion_InvalidUnit_ThrowException" />
-        <item itemvalue="JUnit.QuantityMeasurementAppTest.testConversion_ZeroValue" />
-        <item itemvalue="JUnit.QuantityMeasurementAppTest.testConversion_RoundTrip_PreservesValue" />
+        <item itemvalue="JUnit.QuantityMeasurementAppTest" />
+        <item itemvalue="JUnit.QuantityMeasurementAppTest.testConversion_FeetToInches" />
+        <item itemvalue="JUnit.QuantityMeasurementAppTest.testAddition_SmallValues" />
+        <item itemvalue="JUnit.QuantityMeasurementAppTest.testConversion_YardToInches" />
+        <item itemvalue="JUnit.QuantityMeasurementAppTest.testConversion_InchesToFeet" />
       </list>
     </recent_temporary>
   </component>
@@ -213,11 +228,6 @@
           <url>file://$PROJECT_DIR$/src/main/java/org/example/Main.java</url>
           <line>13</line>
           <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/apps/quantityMeasurementApp/QuantityMeasurementApp.java</url>
-          <line>88</line>
-          <option name="timeStamp" value="27" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
