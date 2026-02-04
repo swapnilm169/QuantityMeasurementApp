@@ -84,15 +84,17 @@ public class QuantityMeasurementApp {
         Length length2 = new Length(second_value, second_unit);
         return length1.equals(length2);
     }
-    public static Length demonstrateLengthCoversion( Double value, Length.LengthUnit fromUnit,Length.LengthUnit toUnit){
+    public static Length demonstrateLengthCoversion( Double value, Length.LengthUnit fromUnit,Length.LengthUnit toUnit) throws IllegalArgumentException{
         Length length= new Length(value,fromUnit);
         return length.convertTo(toUnit);
     }
-
-    public static Length demonstrateLengthComparison(Length.LengthUnit fromUnit ,Length.LengthUnit toUnit){
-        Double v = (double) fromUnit.compareTo(toUnit);
-        return  new Length(v,toUnit);
+    public static Length demonstrateLengthCoversion( Length fromLength,Length.LengthUnit toUnit){
+        return fromLength.convertTo(toUnit);
     }
+//    public static Length demonstrateLengthComparison(Length.LengthUnit fromUnit ,Length.LengthUnit toUnit){
+//        Double v = (double) fromUnit.compareTo(toUnit);
+//        return  new Length(v,toUnit);
+//    }
     public static Length demonstrateLengthAddition(Length length1,Length length2){
         return length1.add(length2);
     }

@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="5715c65e-99d2-4d9d-905f-99702c0b90e5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/apps/quantityMeasurementApp/Length.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/apps/quantityMeasurementApp/Length.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/apps/quantityMeasurementApp/QuantityMeasurementApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/apps/quantityMeasurementApp/QuantityMeasurementApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/apps/quantityMeasurementAppTest/QuantityMeasurementAppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/apps/quantityMeasurementAppTest/QuantityMeasurementAppTest.java" afterDir="false" />
     </list>
@@ -158,7 +157,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="QuantityMeasurementAppTest.testConversion_InchesToFeet" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="QuantityMeasurementAppTest.testConversion_RoundTrip_PreservesValue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="QuantityMeasurmentApp" />
       <extension name="coverage">
         <pattern>
@@ -168,7 +167,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.apps.quantityMeasurementAppTest" />
       <option name="MAIN_CLASS_NAME" value="com.apps.quantityMeasurementAppTest.QuantityMeasurementAppTest" />
-      <option name="METHOD_NAME" value="testConversion_InchesToFeet" />
+      <option name="METHOD_NAME" value="testConversion_RoundTrip_PreservesValue" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -193,10 +192,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.QuantityMeasurementAppTest" />
+        <item itemvalue="JUnit.QuantityMeasurementAppTest.testConversion_RoundTrip_PreservesValue" />
         <item itemvalue="JUnit.QuantityMeasurementAppTest.testConversion_FeetToInches" />
         <item itemvalue="JUnit.QuantityMeasurementAppTest.testAddition_SmallValues" />
         <item itemvalue="JUnit.QuantityMeasurementAppTest.testConversion_YardToInches" />
-        <item itemvalue="JUnit.QuantityMeasurementAppTest.testConversion_InchesToFeet" />
       </list>
     </recent_temporary>
   </component>

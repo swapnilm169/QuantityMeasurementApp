@@ -4,7 +4,6 @@ import com.apps.quantityMeasurementApp.Length;
 import com.apps.quantityMeasurementApp.QuantityMeasurementApp;
 import org.junit.Test;
 
-//import static org.junit.Assert.*;
 import static com.apps.quantityMeasurementApp.QuantityMeasurementApp.demonstrateLengthComparison;
 import static com.apps.quantityMeasurementApp.QuantityMeasurementApp.demonstrateLengthCoversion;
 import static org.junit.jupiter.api.Assertions.*;
@@ -320,12 +319,12 @@ public class QuantityMeasurementAppTest {
     }
 
 
-//    @Test
-//    public void testConversion_RoundTrip_PreservesValue(){
-//        Length length = new Length(6.0 , Length.LengthUnit.FEET);
-//        Length v= length.convertTo(Length.LengthUnit.YARDS);
-//        assertEquals(length,demonstrateLengthCoversion(v, Length.LengthUnit.YARDS));
-//    }
+    @Test
+    public void testConversion_RoundTrip_PreservesValue(){
+        Length length = new Length(6.0 , Length.LengthUnit.FEET);
+        Length v= length.convertTo(Length.LengthUnit.YARDS);
+        assertEquals(length,demonstrateLengthCoversion(v, Length.LengthUnit.YARDS));
+    }
     @Test
     public void testConversion_ZeroValue(){
         assertEquals(new Length(0.0 , Length.LengthUnit.YARDS),
