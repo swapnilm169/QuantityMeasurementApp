@@ -98,6 +98,9 @@ public class QuantityMeasurementApp {
     public static Length demonstrateLengthAddition(Length length1,Length length2){
         return length1.add(length2);
     }
+    public static Length demonstrateLengthAddition(Length length1,Length length2,Length.LengthUnit lengthUnit){
+        return length1.add(length2,lengthUnit);
+    }
 
     public static void main(String[] args) {
         /*Feet To Inches*/
@@ -136,10 +139,11 @@ public class QuantityMeasurementApp {
                 ? "Equal(true)" : "not-Equal(false)");
 //        demonstrateLengthComparison()
         Length l1= new Length(1.0 , Length.LengthUnit.YARDS);
-        System.out.println( demonstrateLengthAddition(new Length(1.0,Length.LengthUnit.INCHES),new Length(3.0 , Length.LengthUnit.FEET) );
+        System.out.println( demonstrateLengthAddition(new Length(1.0,Length.LengthUnit.INCHES),new Length(3.0 , Length.LengthUnit.FEET) ));
         System.out.println( demonstrateLengthCoversion(1.0,Length.LengthUnit.INCHES, Length.LengthUnit.FEET));
 
         Length l8= new Length(1.0 , Length.LengthUnit.YARDS);
         Length l9= new Length(3.0 , Length.LengthUnit.FEET);
+        System.out.println("Add ::" + l9.add(l8));
     }
 }
