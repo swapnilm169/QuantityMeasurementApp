@@ -20,6 +20,7 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -84,6 +85,7 @@
     "JUnit.QuantityMeasurementAppTest.testEquality_FeetToFeet_SameValue.executor": "Run",
     "JUnit.QuantityMeasurementAppTest.testEquality_FeetToYard_EquivalentValue.executor": "Run",
     "JUnit.QuantityMeasurementAppTest.testEquality_FirstVal_NullComparison.executor": "Run",
+    "JUnit.QuantityMeasurementAppTest.testEquality_InchToFeet_EquivalentValue.executor": "Run",
     "JUnit.QuantityMeasurementAppTest.testEquality_InchToInch_SameValue.executor": "Run",
     "JUnit.QuantityMeasurementAppTest.testEquality_MultiUnit_TransitiveProperty.executor": "Run",
     "JUnit.QuantityMeasurementAppTest.testEquality_YardToFeet_EquivalentValue.executor": "Run",
@@ -93,12 +95,13 @@
     "JUnit.QuantityMeasurementAppTest.testFeetEquality_NullComparisonAllValueNull.executor": "Run",
     "JUnit.QuantityMeasurementAppTest.testFeetEquality_SameReference.executor": "Coverage",
     "JUnit.QuantityMeasurementAppTest.testFeetEquality_SameValue.executor": "Run",
+    "JUnit.QuantityMeasurementAppTest.testInchesEquality_NullComparison_2ValueNull.executor": "Run",
     "JUnit.QuantityMeasurementAppTest.yardEqual36Inches.executor": "Run",
     "Maven.QuantityMeasurmentApp [clean].executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "UC7",
+    "git-widget-placeholder": "UC8",
     "onboarding.tips.debug.path": "D:/Project/QuantityMeasurmentApp/src/main/java/org/example/Main.java",
     "settings.editor.selected.configurable": "inlay.hints"
   }
@@ -138,7 +141,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="QuantityMeasurementAppTest.testAddition_ExplicitTargetUnit_Centimeter" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="QuantityMeasurementAppTest.testAddition_ExplicitTargetUnit_SameAsSecondOperand" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="QuantityMeasurmentApp" />
       <extension name="coverage">
         <pattern>
@@ -148,13 +151,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.apps.quantityMeasurementAppTest" />
       <option name="MAIN_CLASS_NAME" value="com.apps.quantityMeasurementAppTest.QuantityMeasurementAppTest" />
-      <option name="METHOD_NAME" value="testAddition_ExplicitTargetUnit_Centimeter" />
+      <option name="METHOD_NAME" value="testAddition_ExplicitTargetUnit_SameAsSecondOperand" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="QuantityMeasurementAppTest.testAddition_ExplicitTargetUnit_Commutativity" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="QuantityMeasurementAppTest.testAddition_ExplicitTargetUnit_WithZero" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="QuantityMeasurmentApp" />
       <extension name="coverage">
         <pattern>
@@ -164,13 +167,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.apps.quantityMeasurementAppTest" />
       <option name="MAIN_CLASS_NAME" value="com.apps.quantityMeasurementAppTest.QuantityMeasurementAppTest" />
-      <option name="METHOD_NAME" value="testAddition_ExplicitTargetUnit_Commutativity" />
+      <option name="METHOD_NAME" value="testAddition_ExplicitTargetUnit_WithZero" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="QuantityMeasurementAppTest.testAddition_ExplicitTargetUnit_NullTargetUnit" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="QuantityMeasurementAppTest.testAddition_ExplicitTargetUnit_Yards" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="QuantityMeasurmentApp" />
       <extension name="coverage">
         <pattern>
@@ -180,13 +183,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.apps.quantityMeasurementAppTest" />
       <option name="MAIN_CLASS_NAME" value="com.apps.quantityMeasurementAppTest.QuantityMeasurementAppTest" />
-      <option name="METHOD_NAME" value="testAddition_ExplicitTargetUnit_NullTargetUnit" />
+      <option name="METHOD_NAME" value="testAddition_ExplicitTargetUnit_Yards" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="QuantityMeasurementAppTest.testAddition_ExplicitTargetUnit_SmallToLarge" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="QuantityMeasurementAppTest.testEquality_InchToFeet_EquivalentValue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="QuantityMeasurmentApp" />
       <extension name="coverage">
         <pattern>
@@ -196,7 +199,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.apps.quantityMeasurementAppTest" />
       <option name="MAIN_CLASS_NAME" value="com.apps.quantityMeasurementAppTest.QuantityMeasurementAppTest" />
-      <option name="METHOD_NAME" value="testAddition_ExplicitTargetUnit_SmallToLarge" />
+      <option name="METHOD_NAME" value="testEquality_InchToFeet_EquivalentValue" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -226,10 +229,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.QuantityMeasurementAppTest" />
-        <item itemvalue="JUnit.QuantityMeasurementAppTest.testAddition_ExplicitTargetUnit_Commutativity" />
-        <item itemvalue="JUnit.QuantityMeasurementAppTest.testAddition_ExplicitTargetUnit_Centimeter" />
-        <item itemvalue="JUnit.QuantityMeasurementAppTest.testAddition_ExplicitTargetUnit_NullTargetUnit" />
-        <item itemvalue="JUnit.QuantityMeasurementAppTest.testAddition_ExplicitTargetUnit_SmallToLarge" />
+        <item itemvalue="JUnit.QuantityMeasurementAppTest.testAddition_ExplicitTargetUnit_Yards" />
+        <item itemvalue="JUnit.QuantityMeasurementAppTest.testAddition_ExplicitTargetUnit_WithZero" />
+        <item itemvalue="JUnit.QuantityMeasurementAppTest.testAddition_ExplicitTargetUnit_SameAsSecondOperand" />
+        <item itemvalue="JUnit.QuantityMeasurementAppTest.testEquality_InchToFeet_EquivalentValue" />
       </list>
     </recent_temporary>
   </component>

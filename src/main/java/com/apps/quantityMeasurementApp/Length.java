@@ -7,21 +7,21 @@ public class Length {
     private final Double value;
     private final LengthUnit unit;
 
-    public enum LengthUnit{
-        FEET(12.0),
-        INCHES(1.0),
-        YARDS(36.0),
-        CENTIMETERS(0.393701);
-
-        private final double conversionFactor;
-
-        LengthUnit(double conversionFactor) {
-            this.conversionFactor = conversionFactor;
-        }
-        private Double getConversionFactor(){
-            return conversionFactor;
-        }
-    }
+//    public enum LengthUnit{
+//        FEET(12.0),
+//        INCHES(1.0),
+//        YARDS(36.0),
+//        CENTIMETERS(0.393701);
+//
+//        private final double conversionFactor;
+//
+//        LengthUnit(double conversionFactor) {
+//            this.conversionFactor = conversionFactor;
+//        }
+//        private Double getConversionFactor(){
+//            return conversionFactor;
+//        }
+//    }
 
     @Override
     public String toString() {
@@ -34,9 +34,10 @@ public class Length {
     this.value=value;
     this.unit=unit;
     }
-    private double convertToBaseUnit(){
-        DecimalFormat df =new DecimalFormat("#.##");
-        return Double.parseDouble(df.format(value * unit.getConversionFactor()));
+    private Double convertToBaseUnit(){
+//        DecimalFormat df =new DecimalFormat("#.##");
+//        return Double.parseDouble(df.format(value * unit.getConversionFactor()));
+        return  unit.convertToBaseUnit(value);
     }
     private boolean compare(Length thatlength){
     if(thatlength==null){
@@ -98,13 +99,14 @@ public class Length {
 
     public Length addAndConvert(Length targetlength, LengthUnit targetUnit){
         Length length = new Length(convertToBaseUnit() + targetlength.convertToBaseUnit(), LengthUnit.INCHES);
-        return length.convertFromBaseToTargetUnit(length.value,targetUnit);
+        return  length.convertFromBaseToTargetUnit(length.value,targetUnit);
     }
 
     private Length convertFromBaseToTargetUnit(double lengthInInches, LengthUnit targetUnit ){
-        DecimalFormat df =new DecimalFormat("#.###");
-        Double sourceValue=lengthInInches * unit.getConversionFactor();
-        return new Length(Double.parseDouble(df.format(sourceValue/targetUnit.getConversionFactor())),targetUnit);
+//        DecimalFormat df =new DecimalFormat("#.###");
+//        Double sourceValue=lengthInInches * unit.getConversionFactor();
+//        return new Length(Double.parseDouble(df.format(sourceValue/targetUnit.getConversionFactor())),targetUnit);
+            return new Length(targetUnit.convertFromBaseUnit(lengthInInches),targetUnit);
     }
     public static void main(String[] args) {
         Length length1= new Length(1.0, LengthUnit.FEET);

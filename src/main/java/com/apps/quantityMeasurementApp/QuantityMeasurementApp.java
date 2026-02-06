@@ -67,8 +67,8 @@ public class QuantityMeasurementApp {
     }
 
     public static void demonstrateFeetInchesComparison() {
-        Length length1 = new Length(1.0, Length.LengthUnit.FEET);
-        Length length2 = new Length(12.0, Length.LengthUnit.INCHES);
+        Length length1 = new Length(1.0, LengthUnit.FEET);
+        Length length2 = new Length(12.0, LengthUnit.INCHES);
 
         boolean result = demonstrateLengthEquality(length1, length2);
         System.out.println(result ? "Inches :: Equal(true)" : "Inches:: not-Equal(false)");
@@ -78,17 +78,17 @@ public class QuantityMeasurementApp {
         return length1.equals(length2);
     }
 
-    public static boolean demonstrateLengthComparison(Double first_value, Length.LengthUnit first_unit,
-                                                      Double second_value, Length.LengthUnit second_unit) {
+    public static boolean demonstrateLengthComparison(Double first_value, LengthUnit first_unit,
+                                                      Double second_value, LengthUnit second_unit) {
         Length length1 = new Length(first_value, first_unit);
         Length length2 = new Length(second_value, second_unit);
         return length1.equals(length2);
     }
-    public static Length demonstrateLengthCoversion( Double value, Length.LengthUnit fromUnit,Length.LengthUnit toUnit) throws IllegalArgumentException{
+    public static Length demonstrateLengthCoversion( Double value, LengthUnit fromUnit,LengthUnit toUnit) throws IllegalArgumentException{
         Length length= new Length(value,fromUnit);
         return length.convertTo(toUnit);
     }
-    public static Length demonstrateLengthCoversion( Length fromLength,Length.LengthUnit toUnit){
+    public static Length demonstrateLengthCoversion( Length fromLength,LengthUnit toUnit){
         return fromLength.convertTo(toUnit);
     }
 //    public static Length demonstrateLengthComparison(Length.LengthUnit fromUnit ,Length.LengthUnit toUnit){
@@ -98,52 +98,52 @@ public class QuantityMeasurementApp {
     public static Length demonstrateLengthAddition(Length length1,Length length2){
         return length1.add(length2);
     }
-    public static Length demonstrateLengthAddition(Length length1,Length length2,Length.LengthUnit lengthUnit){
+    public static Length demonstrateLengthAddition(Length length1,Length length2,LengthUnit lengthUnit){
         return length1.add(length2,lengthUnit);
     }
 
     public static void main(String[] args) {
         /*Feet To Inches*/
-        demonstrateLengthComparison(1.0, Length.LengthUnit.FEET,
-                12.0, Length.LengthUnit.INCHES);
-        System.out.println(demonstrateLengthComparison(1.0, Length.LengthUnit.FEET,
-                12.0, Length.LengthUnit.INCHES)
+        demonstrateLengthComparison(1.0, LengthUnit.FEET,
+                12.0, LengthUnit.INCHES);
+        System.out.println(demonstrateLengthComparison(1.0, LengthUnit.FEET,
+                12.0, LengthUnit.INCHES)
                 ? " Equal(true) " : "not-Equal(false)");
 
         /*Yards To Inches*/
-        demonstrateLengthComparison(1.0, Length.LengthUnit.YARDS,
-                36.0, Length.LengthUnit.INCHES);
-        System.out.println(demonstrateLengthComparison(1.0, Length.LengthUnit.YARDS,
-                36.0, Length.LengthUnit.INCHES)
+        demonstrateLengthComparison(1.0, LengthUnit.YARDS,
+                36.0, LengthUnit.INCHES);
+        System.out.println(demonstrateLengthComparison(1.0, LengthUnit.YARDS,
+                36.0, LengthUnit.INCHES)
                 ? "Equal(true)" : "not-Equal(false)");
 
         /*CENTIMETERS To Inches*/
-        demonstrateLengthComparison(100.0, Length.LengthUnit.CENTIMETERS,
-                39.3701, Length.LengthUnit.INCHES);
-        System.out.println(demonstrateLengthComparison(100.0, Length.LengthUnit.CENTIMETERS,
-                39.3701, Length.LengthUnit.INCHES)
+        demonstrateLengthComparison(100.0, LengthUnit.CENTIMETERS,
+                39.3701, LengthUnit.INCHES);
+        System.out.println(demonstrateLengthComparison(100.0, LengthUnit.CENTIMETERS,
+                39.3701, LengthUnit.INCHES)
                 ? "Equal(true)" : "not-Equal(false)");
 
         /*Feet To Yards*/
-        demonstrateLengthComparison(3.0, Length.LengthUnit.FEET,
-                1.0, Length.LengthUnit.YARDS);
-        System.out.println(demonstrateLengthComparison(3.0, Length.LengthUnit.FEET,
-                1.0, Length.LengthUnit.YARDS)
+        demonstrateLengthComparison(3.0, LengthUnit.FEET,
+                1.0, LengthUnit.YARDS);
+        System.out.println(demonstrateLengthComparison(3.0,LengthUnit.FEET,
+                1.0, LengthUnit.YARDS)
                 ? "Equal(true)" : "not-Equal(false)");
 
         /*CENTIMETERS To Feet*/
-        demonstrateLengthComparison(30.48, Length.LengthUnit.CENTIMETERS,
-                1.0, Length.LengthUnit.FEET);
-        System.out.println(demonstrateLengthComparison(30.48, Length.LengthUnit.CENTIMETERS,
-                1.0, Length.LengthUnit.FEET)
+        demonstrateLengthComparison(30.48, LengthUnit.CENTIMETERS,
+                1.0, LengthUnit.FEET);
+        System.out.println(demonstrateLengthComparison(30.48,LengthUnit.CENTIMETERS,
+                1.0, LengthUnit.FEET)
                 ? "Equal(true)" : "not-Equal(false)");
 //        demonstrateLengthComparison()
-        Length l1= new Length(1.0 , Length.LengthUnit.YARDS);
-        System.out.println( demonstrateLengthAddition(new Length(1.0,Length.LengthUnit.INCHES),new Length(3.0 , Length.LengthUnit.FEET) ));
-        System.out.println( demonstrateLengthCoversion(1.0,Length.LengthUnit.INCHES, Length.LengthUnit.FEET));
+        Length l1= new Length(1.0 , LengthUnit.YARDS);
+        System.out.println( demonstrateLengthAddition(new Length(1.0,LengthUnit.INCHES),new Length(3.0 ,LengthUnit.FEET) ));
+        System.out.println( demonstrateLengthCoversion(1.0,LengthUnit.INCHES, LengthUnit.FEET));
 
-        Length l8= new Length(1.0 , Length.LengthUnit.YARDS);
-        Length l9= new Length(3.0 , Length.LengthUnit.FEET);
+        Length l8= new Length(1.0 ,LengthUnit.YARDS);
+        Length l9= new Length(3.0 ,LengthUnit.FEET);
         System.out.println("Add ::" + l9.add(l8));
     }
 }
