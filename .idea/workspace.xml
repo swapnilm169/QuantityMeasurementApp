@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="5715c65e-99d2-4d9d-905f-99702c0b90e5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/apps/quantityMeasurementApp/Length.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/apps/quantityMeasurementApp/Length.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/apps/quantityMeasurementApp/QuantityMeasurementApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/apps/quantityMeasurementApp/QuantityMeasurementApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/apps/quantityMeasurementAppTest/QuantityMeasurementAppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/apps/quantityMeasurementAppTest/QuantityMeasurementAppTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -19,8 +17,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -45,6 +43,25 @@
     "Application.Length.executor": "Run",
     "Application.QuantityMeasurementApp (1).executor": "Run",
     "Application.QuantityMeasurementApp.executor": "Run",
+    "JUnit.LengthUnitTest.quantityLengthRefactored_ConvertTo.executor": "Run",
+    "JUnit.LengthUnitTest.quantityLengthRefactored_Equality.executor": "Run",
+    "JUnit.LengthUnitTest.quantityLengthRefactored_InvalidValue.executor": "Run",
+    "JUnit.LengthUnitTest.quantityLengthRefactored_NullUnit.executor": "Run",
+    "JUnit.LengthUnitTest.quantityLengthRefactored_add.executor": "Run",
+    "JUnit.LengthUnitTest.quantityLengthRefactored_addWithTargetUnit.executor": "Run",
+    "JUnit.LengthUnitTest.testConvertFromBase_FeetToCentimeter.executor": "Run",
+    "JUnit.LengthUnitTest.testConvertFromBase_FeetToFeet.executor": "Run",
+    "JUnit.LengthUnitTest.testConvertFromBase_FeetToInches.executor": "Run",
+    "JUnit.LengthUnitTest.testConvertFromBase_FeetToYards.executor": "Run",
+    "JUnit.LengthUnitTest.testLengthUnitEnum_CentimeterConstant.executor": "Run",
+    "JUnit.LengthUnitTest.testLengthUnitEnum_CentimeterToFeet.executor": "Run",
+    "JUnit.LengthUnitTest.testLengthUnitEnum_FeetConstant.executor": "Run",
+    "JUnit.LengthUnitTest.testLengthUnitEnum_FeetToFeet.executor": "Run",
+    "JUnit.LengthUnitTest.testLengthUnitEnum_InchesConstant.executor": "Run",
+    "JUnit.LengthUnitTest.testLengthUnitEnum_InchesToFeet.executor": "Run",
+    "JUnit.LengthUnitTest.testLengthUnitEnum_YardsConstant.executor": "Run",
+    "JUnit.LengthUnitTest.testLengthUnitEnum_YardsToFeet.executor": "Run",
+    "JUnit.LengthUnitTest.testUnitImmutability.executor": "Run",
     "JUnit.QuantityMeasurementAppTest (1).executor": "Coverage",
     "JUnit.QuantityMeasurementAppTest.executor": "Run",
     "JUnit.QuantityMeasurementAppTest.testAddition_Commutativity.executor": "Run",
@@ -96,6 +113,7 @@
     "JUnit.QuantityMeasurementAppTest.testFeetEquality_SameReference.executor": "Coverage",
     "JUnit.QuantityMeasurementAppTest.testFeetEquality_SameValue.executor": "Run",
     "JUnit.QuantityMeasurementAppTest.testInchesEquality_NullComparison_2ValueNull.executor": "Run",
+    "JUnit.QuantityMeasurementAppTest.testLengthUnitEnum.executor": "Run",
     "JUnit.QuantityMeasurementAppTest.yardEqual36Inches.executor": "Run",
     "Maven.QuantityMeasurmentApp [clean].executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
@@ -106,7 +124,71 @@
     "settings.editor.selected.configurable": "inlay.hints"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.QuantityMeasurementAppTest">
+  <component name="RunManager" selected="JUnit.LengthUnitTest.testUnitImmutability">
+    <configuration name="LengthUnitTest.quantityLengthRefactored_InvalidValue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="QuantityMeasurmentApp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.apps.quantityMeasurementAppTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.apps.quantityMeasurementAppTest" />
+      <option name="MAIN_CLASS_NAME" value="com.apps.quantityMeasurementAppTest.LengthUnitTest" />
+      <option name="METHOD_NAME" value="quantityLengthRefactored_InvalidValue" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LengthUnitTest.quantityLengthRefactored_NullUnit" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="QuantityMeasurmentApp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.apps.quantityMeasurementAppTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.apps.quantityMeasurementAppTest" />
+      <option name="MAIN_CLASS_NAME" value="com.apps.quantityMeasurementAppTest.LengthUnitTest" />
+      <option name="METHOD_NAME" value="quantityLengthRefactored_NullUnit" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LengthUnitTest.quantityLengthRefactored_addWithTargetUnit" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="QuantityMeasurmentApp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.apps.quantityMeasurementAppTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.apps.quantityMeasurementAppTest" />
+      <option name="MAIN_CLASS_NAME" value="com.apps.quantityMeasurementAppTest.LengthUnitTest" />
+      <option name="METHOD_NAME" value="quantityLengthRefactored_addWithTargetUnit" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LengthUnitTest.testUnitImmutability" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="QuantityMeasurmentApp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.apps.quantityMeasurementAppTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.apps.quantityMeasurementAppTest" />
+      <option name="MAIN_CLASS_NAME" value="com.apps.quantityMeasurementAppTest.LengthUnitTest" />
+      <option name="METHOD_NAME" value="testUnitImmutability" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="QuantityMeasurementAppTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="QuantityMeasurmentApp" />
       <extension name="coverage">
@@ -141,70 +223,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="QuantityMeasurementAppTest.testAddition_ExplicitTargetUnit_SameAsSecondOperand" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="QuantityMeasurmentApp" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.apps.quantityMeasurementAppTest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.apps.quantityMeasurementAppTest" />
-      <option name="MAIN_CLASS_NAME" value="com.apps.quantityMeasurementAppTest.QuantityMeasurementAppTest" />
-      <option name="METHOD_NAME" value="testAddition_ExplicitTargetUnit_SameAsSecondOperand" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="QuantityMeasurementAppTest.testAddition_ExplicitTargetUnit_WithZero" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="QuantityMeasurmentApp" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.apps.quantityMeasurementAppTest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.apps.quantityMeasurementAppTest" />
-      <option name="MAIN_CLASS_NAME" value="com.apps.quantityMeasurementAppTest.QuantityMeasurementAppTest" />
-      <option name="METHOD_NAME" value="testAddition_ExplicitTargetUnit_WithZero" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="QuantityMeasurementAppTest.testAddition_ExplicitTargetUnit_Yards" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="QuantityMeasurmentApp" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.apps.quantityMeasurementAppTest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.apps.quantityMeasurementAppTest" />
-      <option name="MAIN_CLASS_NAME" value="com.apps.quantityMeasurementAppTest.QuantityMeasurementAppTest" />
-      <option name="METHOD_NAME" value="testAddition_ExplicitTargetUnit_Yards" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="QuantityMeasurementAppTest.testEquality_InchToFeet_EquivalentValue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="QuantityMeasurmentApp" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.apps.quantityMeasurementAppTest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.apps.quantityMeasurementAppTest" />
-      <option name="MAIN_CLASS_NAME" value="com.apps.quantityMeasurementAppTest.QuantityMeasurementAppTest" />
-      <option name="METHOD_NAME" value="testEquality_InchToFeet_EquivalentValue" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Unnamed" type="TestNG" nameIsGenerated="true">
       <module name="QuantityMeasurmentApp" />
       <shortenClasspath name="NONE" />
@@ -228,11 +246,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.LengthUnitTest.testUnitImmutability" />
         <item itemvalue="JUnit.QuantityMeasurementAppTest" />
-        <item itemvalue="JUnit.QuantityMeasurementAppTest.testAddition_ExplicitTargetUnit_Yards" />
-        <item itemvalue="JUnit.QuantityMeasurementAppTest.testAddition_ExplicitTargetUnit_WithZero" />
-        <item itemvalue="JUnit.QuantityMeasurementAppTest.testAddition_ExplicitTargetUnit_SameAsSecondOperand" />
-        <item itemvalue="JUnit.QuantityMeasurementAppTest.testEquality_InchToFeet_EquivalentValue" />
+        <item itemvalue="JUnit.LengthUnitTest.quantityLengthRefactored_InvalidValue" />
+        <item itemvalue="JUnit.LengthUnitTest.quantityLengthRefactored_NullUnit" />
+        <item itemvalue="JUnit.LengthUnitTest.quantityLengthRefactored_addWithTargetUnit" />
       </list>
     </recent_temporary>
   </component>

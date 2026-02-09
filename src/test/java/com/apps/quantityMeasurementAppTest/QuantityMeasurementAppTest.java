@@ -496,10 +496,4 @@ public class QuantityMeasurementAppTest {
 //                new Length(12.0,Length.LengthUnit.INCHES),
 //                demonstrateLengthAddition((new Length(12.0,Length.LengthUnit.INCHES),Length.LengthUnit.YARDS),Length.LengthUnit.YARDS);
     }
-    @Test
-    public void testLengthUnitEnum(){
-        assertEquals(new Length(0.67 ,LengthUnit.YARDS),
-                demonstrateLengthAddition(new Length(12.0,LengthUnit.INCHES),
-                        new Length(12.0,LengthUnit.INCHES),LengthUnit.YARDS));
-    }
 }
