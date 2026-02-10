@@ -102,6 +102,52 @@ public class QuantityMeasurementApp {
         return length1.add(length2,lengthUnit);
     }
 
+    public static class Gram {
+        private final Double value;
+
+        public Gram(Double value) {
+            this.value = value;
+        }
+
+        @Override
+        public boolean equals(Object obj) {
+            if (this == obj) return true;
+            if (obj == null || getClass() != obj.getClass()) return false;
+            Gram gram = (Gram) obj;
+            if (this.value == null && gram.value == null) {
+                return true;
+            }
+            if (this.value == null || gram.value == null) {
+                return false;
+            }
+            return Double.compare(this.value, gram.value) == 0;
+        }
+    }
+    public static boolean demonstrateWeightEquality(Weight weight1, Weight weight2) {
+        return weight1.equals(weight2);
+    }
+
+    public static boolean demonstrateWeightComparison(Double first_value, WeightUnit first_unit,
+            Double second_value, WeightUnit second_unit) {
+        Weight weight1 = new Weight(first_value, first_unit);
+        Weight weight2 = new Weight(second_value, second_unit);
+        return weight1.equals(weight2);
+    }
+    public static Weight demonstrateWeightConversion( Double value, WeightUnit fromUnit,WeightUnit toUnit) throws IllegalArgumentException{
+        Weight weight= new Weight(value,fromUnit);
+        return weight.convertTo(toUnit);
+    }
+    public static Weight demonstrateWeightConversion( Weight fromWeight,WeightUnit toUnit){
+        return fromWeight.convertTo(toUnit);
+    }
+
+    public static Weight demonstrateWeightAddition(Weight weight1,Weight weight2){
+        return weight1.add(weight1);
+    }
+    public static Weight demonstrateWeightAddition(Weight weight1,Weight weight2,WeightUnit weightUnit){
+        return weight1.add(weight2,weightUnit);
+    }
+
     public static void main(String[] args) {
         /*Feet To Inches*/
         demonstrateLengthComparison(1.0, LengthUnit.FEET,
@@ -145,5 +191,13 @@ public class QuantityMeasurementApp {
         Length l8= new Length(1.0 ,LengthUnit.YARDS);
         Length l9= new Length(3.0 ,LengthUnit.FEET);
         System.out.println("Add ::" + l9.add(l8));
+
+        Weight w1= new Weight(3.0 ,WeightUnit.GRAM);
+        Weight w2= new Weight(3.0 ,WeightUnit.GRAM);
+        System.out.println("Add Weight ::" + w2.add(w1));
+
+        System.out.println("Add Weight2 ::" + demonstrateWeightAddition(new Weight(1.0,WeightUnit.GRAM),new Weight(3.0 ,WeightUnit.KILOGRAM) ));
+//        System.out.println( demonstrateLengthCoversion(1.0,LengthUnit.INCHES, LengthUnit.FEET));
+
     }
 }
