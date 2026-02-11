@@ -5,6 +5,15 @@ import java.util.Objects;
 
 public class Weight {
     private Double value;
+
+    @Override
+    public String toString() {
+        return "Weight{" +
+                "value=" + value +
+                ", unit=" + unit +
+                '}';
+    }
+
     private WeightUnit unit;
 
     public Weight(double value, WeightUnit unit) {
@@ -21,12 +30,12 @@ public class Weight {
     }
 
 
-    @Override
-    public boolean equals(Object object) {
-        if (object == null || getClass() != object.getClass()) return false;
-        Weight weight = (Weight) object;
-        return Double.compare(getValue(), weight.getValue()) == 0 && getUnit() == weight.getUnit();
-    }
+//    @Override
+//    public boolean equals(Object object) {
+//        if (object == null || getClass() != object.getClass()) return false;
+//        Weight weight = (Weight) object;
+//        return Double.compare(getValue(), weight.getValue()) == 0 && getUnit() == weight.getUnit();
+//    }
 
     public Weight convertTo(WeightUnit targetUnit) throws IllegalArgumentException{
 
@@ -36,7 +45,7 @@ public class Weight {
         if(Objects.isNull(unit)|| (Objects.isNull(targetUnit))){
             throw new IllegalArgumentException("Value must me Not null");
         }
-        DecimalFormat df= new DecimalFormat("#.###");
+        DecimalFormat df= new DecimalFormat("#.#####");
         double sourceValue= value * unit.getConversionFactor();
         return new Weight(Double.parseDouble(df.format(sourceValue/targetUnit.getConversionFactor())),targetUnit);
     }
@@ -75,13 +84,32 @@ public class Weight {
         }
         return Double.compare(convertToBaseUnit(),thatWeight.convertToBaseUnit())==0;
     }
+    @Override
+    public boolean equals(Object obj) {
+        if(this==obj)return true;
+        if(obj == null||getClass()!= obj.getClass())return false;
+        Weight weight = (Weight) obj;
+        if(this.value== null && weight.value==null && this.unit == null && weight.unit== null){
+            return true;
+        }
+        if(this.value == null || weight.value==null || this.unit == null || weight.unit== null){
+            return false;
+        }
+        return this.compare(weight);
+    }
     private Weight addAndConvert(Weight targetWeight, WeightUnit targetUnit){
         Weight weight = new Weight(convertToBaseUnit() + targetWeight.convertToBaseUnit(), WeightUnit.GRAM);
         return  weight.convertFromBaseToTargetUnit(weight.value,targetUnit);
     }
 
-    private Weight convertFromBaseToTargetUnit(double value, WeightUnit targetUnit) {
+    private Weight convertFromBaseToTargetUnit(Double value, WeightUnit targetUnit) {
         return new Weight(targetUnit.convertFromBaseUnit(value),targetUnit);
     }
 
+    public static void main(String[] args) {
+        Weight w1= new Weight(3.0 ,WeightUnit.GRAM);
+        Weight w2= new Weight(2.0 ,WeightUnit.KILOGRAM);
+        System.out.println("Add Weight ::" + w2.add(w1));
+        System.out.println("add" +new Weight(3.0 ,WeightUnit.GRAM).add(new Weight(2.0 ,WeightUnit.KILOGRAM)));
+    }
 }

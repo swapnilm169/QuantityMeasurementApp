@@ -142,7 +142,7 @@ public class QuantityMeasurementApp {
     }
 
     public static Weight demonstrateWeightAddition(Weight weight1,Weight weight2){
-        return weight1.add(weight1);
+        return weight1.add(weight2);
     }
     public static Weight demonstrateWeightAddition(Weight weight1,Weight weight2,WeightUnit weightUnit){
         return weight1.add(weight2,weightUnit);
@@ -198,6 +198,10 @@ public class QuantityMeasurementApp {
 
         System.out.println("Add Weight2 ::" + demonstrateWeightAddition(new Weight(1.0,WeightUnit.GRAM),new Weight(3.0 ,WeightUnit.KILOGRAM) ));
 //        System.out.println( demonstrateLengthCoversion(1.0,LengthUnit.INCHES, LengthUnit.FEET));
-
+        demonstrateWeightComparison(1000.0, WeightUnit.GRAM,
+                1.0, WeightUnit.KILOGRAM);
+        System.out.println(demonstrateWeightComparison(1000.0,WeightUnit.GRAM,
+                1.0, WeightUnit.KILOGRAM)
+                ? "Equal(true)" : "not-Equal(false)");
     }
 }

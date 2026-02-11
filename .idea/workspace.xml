@@ -7,7 +7,8 @@
     <list default="true" id="5715c65e-99d2-4d9d-905f-99702c0b90e5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/apps/quantityMeasurementApp/QuantityMeasurementApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/apps/quantityMeasurementApp/QuantityMeasurementApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/apps/quantityMeasurementAppTest/LengthTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/apps/quantityMeasurementAppTest/LengthTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/apps/quantityMeasurementApp/Weight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/apps/quantityMeasurementApp/Weight.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/apps/quantityMeasurementAppTest/QuantityMeasurementAppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/apps/quantityMeasurementAppTest/QuantityMeasurementAppTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +46,7 @@
     "Application.LengthTest.executor": "Run",
     "Application.QuantityMeasurementApp (1).executor": "Run",
     "Application.QuantityMeasurementApp.executor": "Run",
+    "Application.Weight.executor": "Run",
     "Application.WeightUnit.executor": "Run",
     "JUnit.LengthUnitTest.quantityLengthRefactored_ConvertTo.executor": "Run",
     "JUnit.LengthUnitTest.quantityLengthRefactored_Equality.executor": "Run",
@@ -67,6 +69,9 @@
     "JUnit.LengthUnitTest.testUnitImmutability.executor": "Run",
     "JUnit.QuantityMeasurementAppTest (1).executor": "Coverage",
     "JUnit.QuantityMeasurementAppTest.executor": "Run",
+    "JUnit.QuantityMeasurementAppTest.testAdditionWeight_Commutativity.executor": "Run",
+    "JUnit.QuantityMeasurementAppTest.testAdditionWeight_NegativeValue.executor": "Run",
+    "JUnit.QuantityMeasurementAppTest.testAdditionWeight_ZeroValue.executor": "Run",
     "JUnit.QuantityMeasurementAppTest.testAddition_Commutativity.executor": "Run",
     "JUnit.QuantityMeasurementAppTest.testAddition_CrossUnit_CentimeterToInch.executor": "Run",
     "JUnit.QuantityMeasurementAppTest.testAddition_CrossUnit_FeetPlusInch.executor": "Run",
@@ -84,12 +89,14 @@
     "JUnit.QuantityMeasurementAppTest.testAddition_ExplicitTargetUnit_SmallToLarge.executor": "Run",
     "JUnit.QuantityMeasurementAppTest.testAddition_ExplicitTargetUnit_WithZero.executor": "Run",
     "JUnit.QuantityMeasurementAppTest.testAddition_ExplicitTargetUnit_Yards.executor": "Run",
+    "JUnit.QuantityMeasurementAppTest.testAddition_LargeValue.executor": "Run",
     "JUnit.QuantityMeasurementAppTest.testAddition_NegativeValue.executor": "Run",
     "JUnit.QuantityMeasurementAppTest.testAddition_NullSecondOperand.executor": "Run",
     "JUnit.QuantityMeasurementAppTest.testAddition_SameUnit_FeetPlusFeet.executor": "Run",
     "JUnit.QuantityMeasurementAppTest.testAddition_SameUnit_InchPlusInch.executor": "Run",
     "JUnit.QuantityMeasurementAppTest.testAddition_SmallValues.executor": "Run",
     "JUnit.QuantityMeasurementAppTest.testAddition_WithZero.executor": "Run",
+    "JUnit.QuantityMeasurementAppTest.testConversionWeight_NegativeValue.executor": "Run",
     "JUnit.QuantityMeasurementAppTest.testConversion_CentimeterToInches.executor": "Run",
     "JUnit.QuantityMeasurementAppTest.testConversion_FeetToInches.executor": "Run",
     "JUnit.QuantityMeasurementAppTest.testConversion_FeetToYard.executor": "Debug",
@@ -101,17 +108,31 @@
     "JUnit.QuantityMeasurementAppTest.testConversion_RoundTrip_PreservesValue.executor": "Run",
     "JUnit.QuantityMeasurementAppTest.testConversion_YardToInches.executor": "Run",
     "JUnit.QuantityMeasurementAppTest.testConversion_ZeroValue.executor": "Run",
+    "JUnit.QuantityMeasurementAppTest.testEqualityWeight_KilogramToPound.executor": "Run",
+    "JUnit.QuantityMeasurementAppTest.testEqualityWeight_LargeWeightValues.executor": "Run",
+    "JUnit.QuantityMeasurementAppTest.testEqualityWeight_NegativeValues.executor": "Run",
+    "JUnit.QuantityMeasurementAppTest.testEqualityWeight_NullUnit.executor": "Run",
+    "JUnit.QuantityMeasurementAppTest.testEqualityWeight_PoundToKilogram.executor": "Run",
+    "JUnit.QuantityMeasurementAppTest.testEqualityWeight_SameUnit.executor": "Run",
+    "JUnit.QuantityMeasurementAppTest.testEqualityWeight_SmallWeightValues.executor": "Run",
+    "JUnit.QuantityMeasurementAppTest.testEqualityWeight_ZeroValue.executor": "Run",
+    "JUnit.QuantityMeasurementAppTest.testEqualityWeight_ZeroValues.executor": "Run",
     "JUnit.QuantityMeasurementAppTest.testEquality_AllUnit_ComplexScenario.executor": "Run",
     "JUnit.QuantityMeasurementAppTest.testEquality_FeetToFeet_SameValue.executor": "Run",
     "JUnit.QuantityMeasurementAppTest.testEquality_FeetToYard_EquivalentValue.executor": "Run",
     "JUnit.QuantityMeasurementAppTest.testEquality_FirstVal_NullComparison.executor": "Run",
+    "JUnit.QuantityMeasurementAppTest.testEquality_GramToKilogram_EquivalentValue.executor": "Run",
     "JUnit.QuantityMeasurementAppTest.testEquality_InchToFeet_EquivalentValue.executor": "Run",
     "JUnit.QuantityMeasurementAppTest.testEquality_InchToInch_SameValue.executor": "Run",
     "JUnit.QuantityMeasurementAppTest.testEquality_MultiUnit_TransitiveProperty.executor": "Run",
+    "JUnit.QuantityMeasurementAppTest.testEquality_WeightVsLength_Incompatible.executor": "Run",
     "JUnit.QuantityMeasurementAppTest.testEquality_YardToFeet_EquivalentValue.executor": "Run",
     "JUnit.QuantityMeasurementAppTest.testEquality_YardWithNullComparison.executor": "Run",
     "JUnit.QuantityMeasurementAppTest.testEquality_YardWithNullUnit.executor": "Run",
     "JUnit.QuantityMeasurementAppTest.testEquality_YardWithSameRefrence.executor": "Run",
+    "JUnit.QuantityMeasurementAppTest.testEquality_kilogramToGram_EquivalentValue.executor": "Run",
+    "JUnit.QuantityMeasurementAppTest.testEquality_kilogramToKilogram_DifferentValue.executor": "Run",
+    "JUnit.QuantityMeasurementAppTest.testEquality_kilogramToKilogram_SameValue.executor": "Run",
     "JUnit.QuantityMeasurementAppTest.testFeetEquality_NullComparisonAllValueNull.executor": "Run",
     "JUnit.QuantityMeasurementAppTest.testFeetEquality_SameReference.executor": "Coverage",
     "JUnit.QuantityMeasurementAppTest.testFeetEquality_SameValue.executor": "Run",
@@ -127,77 +148,7 @@
     "settings.editor.selected.configurable": "inlay.hints"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.QuantityMeasurementApp">
-    <configuration name="LengthTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.apps.quantityMeasurementAppTest.LengthTest" />
-      <module name="QuantityMeasurmentApp" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.apps.quantityMeasurementAppTest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="QuantityMeasurementApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.apps.quantityMeasurementApp.QuantityMeasurementApp" />
-      <module name="QuantityMeasurmentApp" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.apps.quantityMeasurementApp.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="WeightUnit" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.apps.quantityMeasurementApp.WeightUnit" />
-      <module name="QuantityMeasurmentApp" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.apps.quantityMeasurementApp.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LengthUnitTest.testUnitImmutability" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="QuantityMeasurmentApp" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.apps.quantityMeasurementAppTest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.apps.quantityMeasurementAppTest" />
-      <option name="MAIN_CLASS_NAME" value="com.apps.quantityMeasurementAppTest.LengthUnitTest" />
-      <option name="METHOD_NAME" value="testUnitImmutability" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="QuantityMeasurementAppTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="QuantityMeasurmentApp" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.apps.quantityMeasurementAppTest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.apps.quantityMeasurementAppTest" />
-      <option name="MAIN_CLASS_NAME" value="com.apps.quantityMeasurementAppTest.QuantityMeasurementAppTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.QuantityMeasurementAppTest.testConversionWeight_NegativeValue">
     <configuration name="QuantityMeasurementAppTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="QuantityMeasurmentApp" />
       <extension name="coverage">
@@ -213,6 +164,86 @@
       <option name="TEST_SEARCH_SCOPE">
         <value defaultName="wholeProject" />
       </option>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="QuantityMeasurementAppTest.testConversionWeight_NegativeValue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="QuantityMeasurmentApp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.apps.quantityMeasurementAppTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.apps.quantityMeasurementAppTest" />
+      <option name="MAIN_CLASS_NAME" value="com.apps.quantityMeasurementAppTest.QuantityMeasurementAppTest" />
+      <option name="METHOD_NAME" value="testConversionWeight_NegativeValue" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="QuantityMeasurementAppTest.testEqualityWeight_KilogramToPound" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="QuantityMeasurmentApp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.apps.quantityMeasurementAppTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.apps.quantityMeasurementAppTest" />
+      <option name="MAIN_CLASS_NAME" value="com.apps.quantityMeasurementAppTest.QuantityMeasurementAppTest" />
+      <option name="METHOD_NAME" value="testEqualityWeight_KilogramToPound" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="QuantityMeasurementAppTest.testEqualityWeight_PoundToKilogram" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="QuantityMeasurmentApp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.apps.quantityMeasurementAppTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.apps.quantityMeasurementAppTest" />
+      <option name="MAIN_CLASS_NAME" value="com.apps.quantityMeasurementAppTest.QuantityMeasurementAppTest" />
+      <option name="METHOD_NAME" value="testEqualityWeight_PoundToKilogram" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="QuantityMeasurementAppTest.testEqualityWeight_SameUnit" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="QuantityMeasurmentApp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.apps.quantityMeasurementAppTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.apps.quantityMeasurementAppTest" />
+      <option name="MAIN_CLASS_NAME" value="com.apps.quantityMeasurementAppTest.QuantityMeasurementAppTest" />
+      <option name="METHOD_NAME" value="testEqualityWeight_SameUnit" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="QuantityMeasurementAppTest.testEqualityWeight_ZeroValue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="QuantityMeasurmentApp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.apps.quantityMeasurementAppTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.apps.quantityMeasurementAppTest" />
+      <option name="MAIN_CLASS_NAME" value="com.apps.quantityMeasurementAppTest.QuantityMeasurementAppTest" />
+      <option name="METHOD_NAME" value="testEqualityWeight_ZeroValue" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -240,11 +271,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.QuantityMeasurementApp" />
-        <item itemvalue="Application.WeightUnit" />
-        <item itemvalue="Application.LengthTest" />
-        <item itemvalue="JUnit.LengthUnitTest.testUnitImmutability" />
-        <item itemvalue="JUnit.QuantityMeasurementAppTest" />
+        <item itemvalue="JUnit.QuantityMeasurementAppTest.testConversionWeight_NegativeValue" />
+        <item itemvalue="JUnit.QuantityMeasurementAppTest.testEqualityWeight_ZeroValue" />
+        <item itemvalue="JUnit.QuantityMeasurementAppTest.testEqualityWeight_PoundToKilogram" />
+        <item itemvalue="JUnit.QuantityMeasurementAppTest.testEqualityWeight_KilogramToPound" />
+        <item itemvalue="JUnit.QuantityMeasurementAppTest.testEqualityWeight_SameUnit" />
       </list>
     </recent_temporary>
   </component>
