@@ -196,7 +196,7 @@ public class QuantityMeasurementApp {
         Weight w2= new Weight(3.0 ,WeightUnit.GRAM);
         System.out.println("Add Weight ::" + w2.add(w1));
 
-        System.out.println("Add Weight2 ::" + demonstrateWeightAddition(new Weight(1.0,WeightUnit.GRAM),new Weight(3.0 ,WeightUnit.KILOGRAM) ));
+        System.out.println("Add Weight2 ::" + demonstrateWeightAddition(new Weight(1.0,WeightUnit.GRAM),new Weight(3.0 ,WeightUnit.KILOGRAM)));
 //        System.out.println( demonstrateLengthCoversion(1.0,LengthUnit.INCHES, LengthUnit.FEET));
         demonstrateWeightComparison(1000.0, WeightUnit.GRAM,
                 1.0, WeightUnit.KILOGRAM);
