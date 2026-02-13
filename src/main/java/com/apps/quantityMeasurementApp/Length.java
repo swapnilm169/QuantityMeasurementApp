@@ -43,7 +43,7 @@ public class Length {
     if(thatlength==null){
         return false;
     }
-        return Double.compare(convertToBaseUnit(),thatlength.convertToBaseUnit())==0;
+        return Double.compare(unit.convertToBaseUnit(value),thatlength.unit.convertToBaseUnit(value))==0;
     }
 
     @Override

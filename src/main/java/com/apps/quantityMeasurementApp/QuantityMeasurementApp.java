@@ -148,6 +148,11 @@ public class QuantityMeasurementApp {
         return weight1.add(weight2,weightUnit);
     }
 
+    public static< U extends IMeasurable>
+                boolean demonstrateEquality(Quantity<U> quantity1,Quantity<U>quantity2){
+        return true;
+    }
+
     public static void main(String[] args) {
         /*Feet To Inches*/
         demonstrateLengthComparison(1.0, LengthUnit.FEET,

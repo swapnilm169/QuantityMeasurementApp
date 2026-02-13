@@ -6,8 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="5715c65e-99d2-4d9d-905f-99702c0b90e5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/apps/quantityMeasurementApp/Length.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/apps/quantityMeasurementApp/Length.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/apps/quantityMeasurementApp/LengthUnit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/apps/quantityMeasurementApp/LengthUnit.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/apps/quantityMeasurementApp/QuantityMeasurementApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/apps/quantityMeasurementApp/QuantityMeasurementApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/apps/quantityMeasurementAppTest/QuantityMeasurementAppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/apps/quantityMeasurementAppTest/QuantityMeasurementAppTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/apps/quantityMeasurementApp/WeightUnit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/apps/quantityMeasurementApp/WeightUnit.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,8 +19,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Enum" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -31,6 +33,18 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "SW20330673_wipro"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/swapnilm169/QuantityMeasurementApp.git",
+    "accountId": "eca7de6a-b0a2-48e5-bc8d-3580ce4b6ac1"
+  }
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
 }</component>
@@ -41,12 +55,14 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.IMeasurable.executor": "Run",
     "Application.Length.executor": "Run",
     "Application.LengthTest.executor": "Run",
     "Application.QuantityMeasurementApp (1).executor": "Run",
     "Application.QuantityMeasurementApp.executor": "Run",
     "Application.Weight.executor": "Run",
     "Application.WeightUnit.executor": "Run",
+    "JUnit.LengthUnitTest.executor": "Run",
     "JUnit.LengthUnitTest.quantityLengthRefactored_ConvertTo.executor": "Run",
     "JUnit.LengthUnitTest.quantityLengthRefactored_Equality.executor": "Run",
     "JUnit.LengthUnitTest.quantityLengthRefactored_InvalidValue.executor": "Run",
@@ -150,13 +166,43 @@
     "Maven.QuantityMeasurmentApp [clean].executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "UC9",
+    "git-widget-placeholder": "UC10",
+    "last_opened_file_path": "D:/Project/QuantityMeasurmentApp",
     "onboarding.tips.debug.path": "D:/Project/QuantityMeasurmentApp/src/main/java/org/example/Main.java",
     "settings.editor.selected.configurable": "inlay.hints"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.QuantityMeasurementAppTest.testEquality_WeightVsLength_Incompatible">
+  <component name="RunManager" selected="Application.IMeasurable">
+    <configuration name="IMeasurable" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.apps.quantityMeasurementApp.IMeasurable" />
+      <module name="QuantityMeasurmentApp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.apps.quantityMeasurementApp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LengthUnitTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="QuantityMeasurmentApp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.apps.quantityMeasurementAppTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.apps.quantityMeasurementAppTest" />
+      <option name="MAIN_CLASS_NAME" value="com.apps.quantityMeasurementAppTest.LengthUnitTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="QuantityMeasurementAppTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="QuantityMeasurmentApp" />
       <extension name="coverage">
@@ -172,54 +218,6 @@
       <option name="TEST_SEARCH_SCOPE">
         <value defaultName="wholeProject" />
       </option>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="QuantityMeasurementAppTest.testEqualityWeight_LargeWeightValues" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="QuantityMeasurmentApp" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.apps.quantityMeasurementAppTest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.apps.quantityMeasurementAppTest" />
-      <option name="MAIN_CLASS_NAME" value="com.apps.quantityMeasurementAppTest.QuantityMeasurementAppTest" />
-      <option name="METHOD_NAME" value="testEqualityWeight_LargeWeightValues" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="QuantityMeasurementAppTest.testEqualityWeight_SameReference" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="QuantityMeasurmentApp" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.apps.quantityMeasurementAppTest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.apps.quantityMeasurementAppTest" />
-      <option name="MAIN_CLASS_NAME" value="com.apps.quantityMeasurementAppTest.QuantityMeasurementAppTest" />
-      <option name="METHOD_NAME" value="testEqualityWeight_SameReference" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="QuantityMeasurementAppTest.testEqualityWeight_SmallWeightValues" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="QuantityMeasurmentApp" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.apps.quantityMeasurementAppTest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.apps.quantityMeasurementAppTest" />
-      <option name="MAIN_CLASS_NAME" value="com.apps.quantityMeasurementAppTest.QuantityMeasurementAppTest" />
-      <option name="METHOD_NAME" value="testEqualityWeight_SmallWeightValues" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -279,11 +277,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.IMeasurable" />
+        <item itemvalue="JUnit.QuantityMeasurementAppTest" />
+        <item itemvalue="JUnit.LengthUnitTest" />
         <item itemvalue="JUnit.QuantityMeasurementAppTest.testEquality_WeightVsLength_Incompatible" />
         <item itemvalue="JUnit.QuantityMeasurementAppTest.testEqualityWeight_TransitiveProperties" />
-        <item itemvalue="JUnit.QuantityMeasurementAppTest.testEqualityWeight_SameReference" />
-        <item itemvalue="JUnit.QuantityMeasurementAppTest.testEqualityWeight_SmallWeightValues" />
-        <item itemvalue="JUnit.QuantityMeasurementAppTest.testEqualityWeight_LargeWeightValues" />
       </list>
     </recent_temporary>
   </component>

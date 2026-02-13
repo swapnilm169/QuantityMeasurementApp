@@ -2,7 +2,7 @@ package com.apps.quantityMeasurementApp;
 
 import java.text.DecimalFormat;
 
-public enum LengthUnit {
+public enum LengthUnit implements IMeasurable{
     FEET(12.0),
     INCHES(1.0),
     YARDS(36.0),
@@ -13,15 +13,15 @@ public enum LengthUnit {
     LengthUnit(Double conversionFactor) {
         this.conversionFactor = conversionFactor;
     }
-    public Double getConversionFactor(){
+    public double getConversionFactor(){
         return conversionFactor;
     }
-    public Double convertToBaseUnit(Double value){
+    public double convertToBaseUnit(double value){
         DecimalFormat df =new DecimalFormat("#.##");
         return Double.parseDouble(df.format(value * this.getConversionFactor()));
     }
 
-    public Double convertFromBaseUnit(Double baseValue){
+    public double convertFromBaseUnit(double baseValue){
         DecimalFormat df =new DecimalFormat("#.##");
         return Double.parseDouble(df.format(baseValue / this.getConversionFactor()));
     }
