@@ -15,7 +15,14 @@ public class Quantity <U extends  IMeasurable>{
     }
 
     public Quantity(Double value, U unit){
-
+    if(Objects.isNull(value)|| (Objects.isNull(unit))){
+        throw new IllegalArgumentException("Null value is not allowed");
+    }
+    if (Double.isFinite(value)){
+        throw new IllegalArgumentException("value must be numeric");
+    }
+    this.unit=unit;
+    this.value=value;
     }
 
     public Quantity(Double value) {
