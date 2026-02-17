@@ -1,8 +1,5 @@
 package com.apps.quantityMeasurementApp;
 
-
-import java.text.DecimalFormat;
-
 public enum WeightUnit implements IMeasurable{
     MILLIGRAM(0.001),
     GRAM(1.0),
@@ -10,27 +7,29 @@ public enum WeightUnit implements IMeasurable{
     POUND(453.592),
     TONNE(1_000_000.0);
 
-    private final double conversionFactor;
+    private final Double conversionFactor;
 
-    WeightUnit(double conversionFactor) {
+    WeightUnit(Double conversionFactor) {
         this.conversionFactor = conversionFactor;
     }
-    public  double getConversionFactor(){
-      return conversionFactor;
+    @Override
+    public Double getConversionFactor(){
+        return conversionFactor;
     }
-    public  double convertToBaseUnit(double value){
-        DecimalFormat df =new DecimalFormat("#.##");
-        return Double.parseDouble(df.format(value * this.getConversionFactor()));
-//    return value* this.getConversionFactor();
+    @Override
+    public Double convertToBaseUnit(Double value){
+        return Math.round((value * this.getConversionFactor()) * 100.00) /100.0;
     }
-    public double convertFromBaseUnit(double baseValue){
-        DecimalFormat df =new DecimalFormat("#.##");
-        return Math.round((baseValue/ this.conversionFactor) *100.0)/100.0;
+
+    @Override
+    public Double convertFromBaseUnit(Double baseValue){
+        return Math.round((baseValue/this.getConversionFactor()) * 100.00) /100.0;
     }
 
     public static void main(String[] args) {
-        Double killogram = 40000.0;
-        Double gram=WeightUnit.KILOGRAM.convertFromBaseUnit(killogram);
+        Double KilloGram = 10.0;
+        Double gram=WeightUnit.KILOGRAM.convertToBaseUnit(KilloGram);
         System.out.println("In Killo ::" + gram);
+
     }
 }

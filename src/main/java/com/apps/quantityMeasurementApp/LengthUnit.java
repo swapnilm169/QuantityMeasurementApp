@@ -1,6 +1,5 @@
 package com.apps.quantityMeasurementApp;
 
-import java.text.DecimalFormat;
 
 public enum LengthUnit implements IMeasurable{
     FEET(12.0),
@@ -8,21 +7,22 @@ public enum LengthUnit implements IMeasurable{
     YARDS(36.0),
     CENTIMETERS(0.393701);
 
-    private final double conversionFactor;
+    private final Double conversionFactor;
 
     LengthUnit(Double conversionFactor) {
         this.conversionFactor = conversionFactor;
     }
-    public double getConversionFactor(){
+    @Override
+    public Double getConversionFactor(){
         return conversionFactor;
     }
-    public double convertToBaseUnit(double value){
-        DecimalFormat df =new DecimalFormat("#.##");
-        return Double.parseDouble(df.format(value * this.getConversionFactor()));
+    @Override
+    public Double convertToBaseUnit(Double value){
+        return Math.round((value*this.getConversionFactor()) * 100.00)/100.0;
     }
 
-    public double convertFromBaseUnit(double baseValue){
-        DecimalFormat df =new DecimalFormat("#.##");
-        return Double.parseDouble(df.format(baseValue / this.getConversionFactor()));
+    @Override
+    public Double convertFromBaseUnit(Double baseValue){
+        return Math.round((baseValue/this.getConversionFactor()) * 100.00)/100.0;
     }
 }

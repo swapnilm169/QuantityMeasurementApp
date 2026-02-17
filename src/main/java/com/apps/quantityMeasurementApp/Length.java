@@ -2,26 +2,11 @@ package com.apps.quantityMeasurementApp;
 
 import java.text.DecimalFormat;
 import java.util.Objects;
+import java.util.UUID;
 
 public class Length {
     private final Double value;
     private final LengthUnit unit;
-
-//    public enum LengthUnit{
-//        FEET(12.0),
-//        INCHES(1.0),
-//        YARDS(36.0),
-//        CENTIMETERS(0.393701);
-//
-//        private final double conversionFactor;
-//
-//        LengthUnit(double conversionFactor) {
-//            this.conversionFactor = conversionFactor;
-//        }
-//        private Double getConversionFactor(){
-//            return conversionFactor;
-//        }
-//    }
 
     @Override
     public String toString() {
@@ -31,19 +16,23 @@ public class Length {
                 '}';
     }
     public Length(Double value ,LengthUnit unit){
-    this.value=value;
-    this.unit=unit;
+        if(Objects.isNull(value)|| Objects.isNull(unit)){
+           throw new IllegalArgumentException("null value is not allowed");
+        }
+        if(Double.isNaN(value)){
+            throw new IllegalArgumentException("null Unit is not allowed");
+        }
+        this.value=value;
+        this.unit=unit;
     }
     private Double convertToBaseUnit(){
-//        DecimalFormat df =new DecimalFormat("#.##");
-//        return Double.parseDouble(df.format(value * unit.getConversionFactor()));
         return  unit.convertToBaseUnit(value);
     }
     private boolean compare(Length thatlength){
     if(thatlength==null){
         return false;
     }
-        return Double.compare(unit.convertToBaseUnit(value),thatlength.unit.convertToBaseUnit(value))==0;
+        return Double.compare(convertToBaseUnit(),thatlength.convertToBaseUnit())==0;
     }
 
     @Override
@@ -67,7 +56,7 @@ public class Length {
             throw new IllegalArgumentException("Value must me Not null");
         }
         DecimalFormat df= new DecimalFormat("#.###");
-        double sourceValue= value * unit.getConversionFactor();
+        Double sourceValue= value * unit.getConversionFactor();
         return new Length(Double.parseDouble(df.format(sourceValue/targetUnit.getConversionFactor())),targetUnit);
     }
 

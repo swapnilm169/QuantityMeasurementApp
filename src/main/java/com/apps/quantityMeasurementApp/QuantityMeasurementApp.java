@@ -148,9 +148,18 @@ public class QuantityMeasurementApp {
         return weight1.add(weight2,weightUnit);
     }
 
-    public static< U extends IMeasurable>
+    public static<U extends IMeasurable>
                 boolean demonstrateEquality(Quantity<U> quantity1,Quantity<U>quantity2){
-        return true;
+        return quantity1.equals(quantity2);
+    }
+    public static<U extends IMeasurable> Quantity<U> demonstrateConversion(Quantity<U> quantity ,U targetUnit){
+     return (quantity.convertTo(targetUnit));
+    }
+    public static<U extends IMeasurable> Quantity<U> demonstrateAddition(Quantity<U> quantity1,Quantity<U>quantity2){
+        return quantity1.add(quantity2);
+    }
+    public static<U extends IMeasurable> Quantity<U> demonstrateAddition (Quantity<U> quantity1 ,Quantity<U> quantity2 , U targetUnit){
+    return quantity1.add(quantity2,targetUnit);
     }
 
     public static void main(String[] args) {
@@ -208,5 +217,27 @@ public class QuantityMeasurementApp {
         System.out.println(demonstrateWeightComparison(1000.0,WeightUnit.GRAM,
                 1.0, WeightUnit.KILOGRAM)
                 ? "Equal(true)" : "not-Equal(false)");
+
+        /*UC 10 Impl*/
+        /*demonstrate Equality between two quantities */
+        Quantity <WeightUnit> weightInGram= new Quantity<>(1000.0,WeightUnit.GRAM);
+        Quantity <WeightUnit> weightInKiloGram= new Quantity<>(1.0,WeightUnit.KILOGRAM);
+        boolean areEqual= demonstrateEquality(weightInGram,weightInKiloGram);
+        System.out.println("Weight are Equal? " +areEqual);
+
+        /*demonstrate Comparison between two quantities */
+        Quantity<WeightUnit> convertedWeight= demonstrateConversion(weightInGram,WeightUnit.KILOGRAM);
+        System.out.println("Converted Weight :: " +convertedWeight.getValue() + " " + convertedWeight.getUnit());
+
+        /*demonstrate addition of two quantities and return the result in the unit*/
+
+        Quantity<WeightUnit> weightInPound= new Quantity<>(0.20462,WeightUnit.POUND);
+        Quantity<WeightUnit>  sumWeight= demonstrateAddition(weightInKiloGram,weightInPound);
+        System.out.println("Sum Weight :: " + sumWeight.getValue() + " "+ sumWeight.getUnit());
+
+        /*demonstrate addition of two quantities and return the result in the specified unit*/
+
+        Quantity<WeightUnit> sumUnitInGram= demonstrateAddition(weightInKiloGram,weightInPound,WeightUnit.GRAM);
+        System.out.println("Sum sumUnitInGram :: " +sumUnitInGram.getValue() + " "+ sumUnitInGram.getUnit());
     }
 }

@@ -2,13 +2,13 @@ package com.apps.quantityMeasurementApp;
 
 public interface IMeasurable {
 
-    public double getConversionFactor();
+     Double getConversionFactor();
 
-    public double convertToBaseUnit(double value);
+     Double convertToBaseUnit(Double value);
 
-    public double convertFromBaseUnit(double value);
+     Double convertFromBaseUnit(Double value);
 
-    public static void main(String[] args) {
+     static void main(String[] args) {
         System.out.println("IMeasurable Interface");
     }
 }

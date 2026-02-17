@@ -1,11 +1,42 @@
 package com.apps.quantityMeasurementApp;
-
-import java.text.DecimalFormat;
 import java.util.Objects;
 
 public class Weight {
-    private Double value;
+    private final Double value;
+    private final WeightUnit unit;
 
+    public Weight(Double value, WeightUnit unit) {
+        if(Objects.isNull(value)|| Objects.isNull(unit)){
+            throw new IllegalArgumentException("null value is not allowed");
+        }
+        if(Double.isNaN(value)){
+            throw new IllegalArgumentException("null Unit is not allowed");
+        }
+        this.value = value;
+        this.unit = unit;
+    }
+
+    private boolean compare(Weight thatWeight){
+        if(thatWeight==null){
+            return false;
+        }
+        return Double.compare(convertToBaseUnit(),thatWeight.convertToBaseUnit())==0;
+    }
+
+    public Double convertToBaseUnit(){
+        return  unit.convertToBaseUnit(value);
+    }
+
+    public Weight convertTo(WeightUnit targetUnit) throws IllegalArgumentException{
+        if(!Double.isFinite(this.value)){
+            throw new IllegalArgumentException("Value must me Numeric");
+        }
+        if(Objects.isNull(unit)|| (Objects.isNull(targetUnit))){
+            throw new IllegalArgumentException("Value must me Not null");
+        }
+        Double sourceValue= value * unit.getConversionFactor();
+        return convertFromBaseToTargetUnit(sourceValue,targetUnit);
+    }
     @Override
     public String toString() {
         return "Weight{" +
@@ -14,42 +45,14 @@ public class Weight {
                 '}';
     }
 
-    private WeightUnit unit;
-
-    public Weight(double value, WeightUnit unit) {
-        this.value = value;
-        this.unit = unit;
-    }
-
-    public double getValue() {
+    public Double getValue() {
         return value;
     }
-
     public WeightUnit getUnit() {
         return unit;
     }
 
-
-//    @Override
-//    public boolean equals(Object object) {
-//        if (object == null || getClass() != object.getClass()) return false;
-//        Weight weight = (Weight) object;
-//        return Double.compare(getValue(), weight.getValue()) == 0 && getUnit() == weight.getUnit();
-//    }
-
-    public Weight convertTo(WeightUnit targetUnit) throws IllegalArgumentException{
-
-        if(!Double.isFinite(this.value)){
-            throw new IllegalArgumentException("Value must me Numeric");
-        }
-        if(Objects.isNull(unit)|| (Objects.isNull(targetUnit))){
-            throw new IllegalArgumentException("Value must me Not null");
-        }
-        DecimalFormat df= new DecimalFormat("#.#####");
-        double sourceValue= value * unit.getConversionFactor();
-        return new Weight(Double.parseDouble(df.format(sourceValue/targetUnit.getConversionFactor())),targetUnit);
-    }
-    public Weight add (Weight thatWeight) throws IllegalArgumentException{
+    public Weight add (Weight thatWeight){
         if (thatWeight==null) {
             throw new IllegalArgumentException("Length must have value not Null");
         }
@@ -72,18 +75,9 @@ public class Weight {
         if(!Double.isFinite(this.value) || (!Double.isFinite(targetWeight.value))){
             throw new IllegalArgumentException("length  and targetLength must have Finite");
         }
-        return  addAndConvert(targetWeight,targetUnit);
+        return addAndConvert(targetWeight,targetUnit);
     }
 
-    public double convertToBaseUnit(){
-        return  unit.convertToBaseUnit(value);
-    }
-    private boolean compare(Weight thatWeight){
-        if(thatWeight==null){
-            return false;
-        }
-        return Double.compare(convertToBaseUnit(),thatWeight.convertToBaseUnit())==0;
-    }
     @Override
     public boolean equals(Object obj) {
         if(this==obj)return true;
@@ -107,9 +101,8 @@ public class Weight {
     }
 
     public static void main(String[] args) {
-        Weight w1= new Weight(3.0 ,WeightUnit.GRAM);
-        Weight w2= new Weight(2.0 ,WeightUnit.KILOGRAM);
-        System.out.println("Add Weight ::" + w2.add(w1));
-        System.out.println("add" +new Weight(3.0 ,WeightUnit.GRAM).add(new Weight(2.0 ,WeightUnit.KILOGRAM)));
+        Weight w1= new Weight(1000.0 ,WeightUnit.GRAM);
+        System.out.println(""+ w1.convertTo(WeightUnit.KILOGRAM));
+//        System.out.println("add" +new Weight(3.0 ,WeightUnit.GRAM).add(new Weight(2.0 ,WeightUnit.KILOGRAM)));
     }
 }
